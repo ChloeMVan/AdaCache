@@ -23,7 +23,6 @@ model = dict(
     from_pretrained=None,
     enable_flash_attn=False,
     enable_layernorm_kernel=False,
-    do_cache=do_cache,
 )
 vae = dict(
     type="OpenSoraVAE_V1_2",

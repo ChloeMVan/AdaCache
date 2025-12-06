@@ -50,6 +50,6 @@ text_encoder = dict(
 scheduler = dict(
     type="rflow",
     use_timestep_transform=True,
-    num_sampling_steps=num_sampling_steps,
+    # num_sampling_steps=num_sampling_steps,
     cfg_scale=7.0,
 )

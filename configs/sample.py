@@ -23,7 +23,6 @@ model = dict(
     from_pretrained=None,
     enable_flash_attn=False,
     enable_layernorm_kernel=False,
-    num_sampling_steps=num_sampling_steps,
     do_cache=do_cache,
 )
 vae = dict(

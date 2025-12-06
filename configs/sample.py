@@ -5,14 +5,14 @@ fps = 24
 frame_interval = 1
 save_fps = 24
 
-num_sampling_steps = 100
+# num_sampling_steps = 100
 
 do_cache = False
 
 seed = 42
 batch_size = 1
 multi_resolution = "STDiT2"
-dtype = "bf16"
+dtype = "fp16"
 condition_frame_length = 5
 align = 5
 aes = 6.5

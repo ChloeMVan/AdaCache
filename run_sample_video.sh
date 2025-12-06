@@ -7,7 +7,7 @@ save_dir='./samples_video/gallery/'
 #prompt_path='./prompts/sora.txt'
 #reference_path='./samples_image/sora'
 #save_dir='./sample_video/sora/'
-
+export PYTHONPATH="$(pwd)/opensora_base:${PYTHONPATH}"
 python inference.py ${config} \
   --flash-attn False \
   --layernorm-kernel False \

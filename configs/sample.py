@@ -19,11 +19,11 @@ aes = 6.5
 flow = None
 
 model = dict(
-    type="STDiT3-XL/2",
-    from_pretrained="hpcai-tech/OpenSora-STDiT-v3",
+    type="Latte-XL/2",
+    from_pretrained=None,
     qk_norm=True,
-    enable_flash_attn=True,
-    enable_layernorm_kernel=True,
+    enable_flash_attn=False,
+    enable_layernorm_kernel=False,
     num_sampling_steps=num_sampling_steps,
     do_cache=do_cache,
 )

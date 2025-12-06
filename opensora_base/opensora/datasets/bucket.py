@@ -2,7 +2,7 @@ from collections import OrderedDict
 
 import numpy as np
 
-from opensora_base.opensora.utils.misc import get_logger
+from opensora.utils.misc import get_logger
 
 from .aspect import ASPECT_RATIOS, get_closest_ratio
 

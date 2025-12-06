@@ -6,8 +6,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from opensora_base.opensora.registry import MODELS
-from opensora_base.opensora.utils.ckpt_utils import find_model, load_checkpoint
+from opensora.registry import MODELS
+from opensora.utils.ckpt_utils import find_model, load_checkpoint
 
 
 def cast_tuple(t, length=1):

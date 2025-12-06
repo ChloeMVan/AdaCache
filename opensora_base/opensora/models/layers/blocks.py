@@ -23,8 +23,8 @@ import xformers.ops
 from einops import rearrange
 from timm.models.vision_transformer import Mlp
 
-from opensora_base.opensora.acceleration.communications import all_to_all, split_forward_gather_backward
-from opensora_base.opensora.acceleration.parallel_states import get_sequence_parallel_group
+from opensora.acceleration.communications import all_to_all, split_forward_gather_backward
+from opensora.acceleration.parallel_states import get_sequence_parallel_group
 
 approx_gelu = lambda: nn.GELU(approximate="tanh")
 

@@ -4,8 +4,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange
 
-from opensora_base.opensora.registry import MODELS
-from opensora_base.opensora.utils.ckpt_utils import load_checkpoint
+from opensora.registry import MODELS
+from opensora.utils.ckpt_utils import load_checkpoint
 
 from .utils import DiagonalGaussianDistribution
 

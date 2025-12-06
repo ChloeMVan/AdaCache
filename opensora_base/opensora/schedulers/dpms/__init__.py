@@ -2,7 +2,7 @@ from functools import partial
 
 import torch
 
-from opensora_base.opensora.registry import SCHEDULERS
+from opensora.registry import SCHEDULERS
 
 from .dpm_solver import DPMS
 

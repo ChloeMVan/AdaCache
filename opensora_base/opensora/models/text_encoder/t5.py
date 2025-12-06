@@ -28,7 +28,7 @@ import ftfy
 import torch
 from transformers import AutoTokenizer, T5EncoderModel
 
-from opensora_base.opensora.registry import MODELS
+from opensora.registry import MODELS
 
 
 class T5Embedder:
@@ -166,8 +166,8 @@ class T5Encoder:
     def shardformer_t5(self):
         from colossalai.shardformer import ShardConfig, ShardFormer
 
-        from opensora_base.opensora.acceleration.shardformer.policy.t5_encoder import T5EncoderPolicy
-        from opensora_base.opensora.utils.misc import requires_grad
+        from opensora.acceleration.shardformer.policy.t5_encoder import T5EncoderPolicy
+        from opensora.utils.misc import requires_grad
 
         shard_config = ShardConfig(
             tensor_parallel_process_group=None,

@@ -7,7 +7,7 @@ import torch
 import torch.distributed as dist
 from torch.utils.data import Dataset, DistributedSampler
 
-from opensora_base.opensora.utils.misc import format_numel_str, get_logger
+from opensora.utils.misc import format_numel_str, get_logger
 
 from .aspect import get_num_pixels
 from .bucket import Bucket

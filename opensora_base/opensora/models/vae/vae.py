@@ -6,8 +6,8 @@ from diffusers.models import AutoencoderKL, AutoencoderKLTemporalDecoder
 from einops import rearrange
 from transformers import PretrainedConfig, PreTrainedModel
 
-from opensora_base.opensora.registry import MODELS, build_module
-from opensora_base.opensora.utils.ckpt_utils import load_checkpoint
+from opensora.registry import MODELS, build_module
+from opensora.utils.ckpt_utils import load_checkpoint
 
 
 @MODELS.register_module()

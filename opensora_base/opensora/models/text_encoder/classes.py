@@ -1,6 +1,6 @@
 import torch
 
-from opensora_base.opensora.registry import MODELS
+from opensora.registry import MODELS
 
 
 @MODELS.register_module("classes")

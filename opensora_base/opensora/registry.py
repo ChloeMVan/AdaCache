@@ -32,15 +32,15 @@ def build_module(module, builder, **kwargs):
 
 MODELS = Registry(
     "model",
-    locations=["opensora_base.opensora.models"],
+    locations=["opensora.models"],
 )
 
 SCHEDULERS = Registry(
     "scheduler",
-    locations=["opensora_base.opensora.schedulers"],
+    locations=["opensora.schedulers"],
 )
 
 DATASETS = Registry(
     "dataset",
-    locations=["opensora_base.opensora.datasets"],
+    locations=["opensora.datasets"],
 )

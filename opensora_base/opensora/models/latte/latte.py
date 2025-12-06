@@ -23,10 +23,10 @@
 import torch
 from einops import rearrange, repeat
 
-from opensora_base.opensora.acceleration.checkpoint import auto_grad_checkpoint
-from opensora_base.opensora.models.dit import DiT
-from opensora_base.opensora.registry import MODELS
-from opensora_base.opensora.utils.ckpt_utils import load_checkpoint
+from opensora.acceleration.checkpoint import auto_grad_checkpoint
+from opensora.models.dit import DiT
+from opensora.registry import MODELS
+from opensora.utils.ckpt_utils import load_checkpoint
 
 
 @MODELS.register_module()

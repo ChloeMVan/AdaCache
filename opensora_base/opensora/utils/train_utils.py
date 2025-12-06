@@ -6,8 +6,8 @@ import torch
 import torch.distributed as dist
 from colossalai.booster.plugin import LowLevelZeroPlugin
 
-from opensora_base.opensora.acceleration.parallel_states import set_data_parallel_group, set_sequence_parallel_group
-from opensora_base.opensora.acceleration.plugin import ZeroSeqParallelPlugin
+from opensora.acceleration.parallel_states import set_data_parallel_group, set_sequence_parallel_group
+from opensora.acceleration.plugin import ZeroSeqParallelPlugin
 
 from .misc import get_logger
 

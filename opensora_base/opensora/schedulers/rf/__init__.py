@@ -1,7 +1,7 @@
 import torch
 from tqdm import tqdm
 
-from opensora_base.opensora.registry import SCHEDULERS
+from opensora.registry import SCHEDULERS
 
 from .rectified_flow import RFlowScheduler, timestep_transform
 

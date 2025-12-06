@@ -9,8 +9,8 @@ from timm.models.layers import DropPath
 from timm.models.vision_transformer import Mlp
 from transformers import PretrainedConfig, PreTrainedModel
 
-from opensora_base.opensora.acceleration.checkpoint import auto_grad_checkpoint
-from opensora_base.opensora.models.layers.blocks import (
+from opensora.acceleration.checkpoint import auto_grad_checkpoint
+from opensora.models.layers.blocks import (
     Attention,
     CaptionEmbedder,
     MultiHeadCrossAttention,
@@ -24,8 +24,8 @@ from opensora_base.opensora.models.layers.blocks import (
     get_layernorm,
     t2i_modulate,
 )
-from opensora_base.opensora.registry import MODELS
-from opensora_base.opensora.utils.ckpt_utils import load_checkpoint
+from opensora.registry import MODELS
+from opensora.utils.ckpt_utils import load_checkpoint
 
 
 class STDiT2Block(nn.Module):

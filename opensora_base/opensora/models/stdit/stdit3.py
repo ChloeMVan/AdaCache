@@ -47,7 +47,7 @@ class STDiT3Block(nn.Module):
         enable_layernorm_kernel=False,
         enable_sequence_parallelism=False,
         blk_id = 0,
-        num_sampling_steps = 100,
+        # num_sampling_steps = 100,
         do_cache = False,
         cache_res = 't-attn',
         cache_loc = [13],

@@ -12,7 +12,7 @@ python inference.py ${config} \
   --flash-attn False \
   --layernorm-kernel False \
   --num-frames '2s' \
-  --resolution '720p' \
+  --resolution '240p' \
   --aspect-ratio '9:16' \
   --num-sampling-steps 100 \
   --prompt-path ${prompt_path} \

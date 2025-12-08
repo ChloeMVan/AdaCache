@@ -9,8 +9,8 @@ save_dir='./samples_video/gallery/'
 #save_dir='./sample_video/sora/'
 
 python inference.py ${config} \
-  --flash-attn False \
-  --layernorm-kernel False \
+  --flash-attn True \
+  --layernorm-kernel True \
   --num-frames '2s' \
   --resolution '720p' \
   --aspect-ratio '9:16' \

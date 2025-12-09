@@ -149,7 +149,7 @@ def main():
     save_dir = cfg.save_dir
     if cfg.get("logdate_dir", False):
         timestring = get_time_string()
-        save_dir = f"{save_dir}{timestring}"
+        # save_dir = f"{save_dir}{timestring}"
     os.makedirs(save_dir, exist_ok=True)
     sample_name = cfg.get("sample_name", None)
     prompt_as_path = cfg.get("prompt_as_path", False)

@@ -12,15 +12,15 @@ python inference.py ${config} \
   --flash-attn True \
   --layernorm-kernel False \
   --num-frames '2s' \
-  --resolution '720p' \
+  --resolution '480p' \
   --aspect-ratio '9:16' \
-  --num-sampling-steps 10 \
+  --num-sampling-steps 30 \
   --prompt-path ${prompt_path} \
   --reference-path ${reference_path} \
   --save-dir ${save_dir} \
   --logdate-dir True \
   --mask-strategy "0" \
-  --aes 7 \
+  --aes 6.5 \
   --flow 5 \
   --fps 24 \
   --save-fps 24 \

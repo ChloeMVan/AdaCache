@@ -33,6 +33,12 @@ from opensora.utils.inference_utils import (
 )
 from opensora.utils.misc import all_exists, create_logger, is_distributed, is_main_process, to_torch_dtype
 
+def log_latency(path: str, op_name: str, dt: float):
+    """Append a single CSV line: timestamp,op_name,seconds."""
+    # Only rank 0 writes, to avoid multi-process contention
+    if (not dist.is_available()) or (not dist.is_initialized()) or dist.get_rank() == 0:
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(f"{time.time():.6f},{op_name},{dt:.6f}\n")
 
 def main():
     torch.set_grad_enabled(False)
@@ -130,7 +136,8 @@ def main():
     fps = cfg.fps
     save_fps = cfg.get("save_fps", fps // cfg.get("frame_interval", 1))
     multi_resolution = cfg.get("multi_resolution", None)
-    batch_size = cfg.get("batch_size", 1)
+    # batch_size = cfg.get("batch_size", 1)
+    batch_size = 1 
     num_sample = cfg.get("num_sample", 1)
     loop = cfg.get("loop", 1)
     condition_frame_length = cfg.get("condition_frame_length", 5)
@@ -139,6 +146,7 @@ def main():
 
     save_dir = cfg.save_dir
     os.makedirs(save_dir, exist_ok=True)
+    latency_log_path = os.path.join(save_dir, "adacache_latency.csv")
     sample_name = cfg.get("sample_name", None)
     prompt_as_path = cfg.get("prompt_as_path", False)
 
@@ -263,6 +271,12 @@ def main():
                 torch.manual_seed(1024)
                 z = torch.randn(len(batch_prompts), vae.out_channels, *latent_size, device=device, dtype=dtype)
                 masks = apply_mask_strategy(z, refs, ms, loop_i, align=align)
+
+                # start timer
+                if device == "cuda":
+                    torch.cuda.synchronize()
+                t0 = time.perf_counter()
+
                 samples = scheduler.sample(
                     model,
                     text_encoder,
@@ -274,6 +288,16 @@ def main():
                     mask=masks,
                 )
                 samples = vae.decode(samples.to(dtype), num_frames=num_frames)
+                
+                # stop timer
+                if device == "cuda":
+                    torch.cuda.synchronize()
+                dt = time.perf_counter() - t0
+
+                # log to CSV: timestamp,generate,<seconds>
+                log_latency(latency_log_path, "generate", dt)
+
+
                 video_clips.append(samples)
 
             # == save samples ==

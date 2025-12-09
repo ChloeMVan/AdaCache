@@ -10,7 +10,7 @@ python inference.py ${config} \
   --flash-attn False \
   --layernorm-kernel False \
   --num-frames 1 \
-  --resolution '1080p' \
+  --resolution '480p' \
   --aspect-ratio '9:16' \
   --num-sampling-steps 30 \
   --prompt-path ${prompt_path} \

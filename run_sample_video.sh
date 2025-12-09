@@ -1,7 +1,7 @@
 config=$1
 
 prompt_path='./prompts/gallery.txt'
-reference_path='./samples_image/gallery'
+reference_path='./samples_image/gallery/'
 save_dir='./samples_video/gallery/'
 
 #prompt_path='./prompts/sora.txt'
@@ -14,7 +14,7 @@ python inference.py ${config} \
   --num-frames '2s' \
   --resolution '720p' \
   --aspect-ratio '9:16' \
-  --num-sampling-steps 100 \
+  --num-sampling-steps 10 \
   --prompt-path ${prompt_path} \
   --reference-path ${reference_path} \
   --save-dir ${save_dir} \

@@ -5,7 +5,7 @@ fps = 24
 frame_interval = 1
 save_fps = 24
 
-num_sampling_steps = 100
+num_sampling_steps = 10
 
 do_cache = True
 # cache_res ['t-attn' 's-attn' 'ca-mlp']

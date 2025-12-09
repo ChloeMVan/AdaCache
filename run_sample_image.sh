@@ -8,7 +8,7 @@ save_dir='./samples_image/gallery'
 
 python inference.py ${config} \
   --flash-attn True \
-  --layernorm-kernel True \
+  --layernorm-kernel False \
   --num-frames 1 \
   --resolution '1080p' \
   --aspect-ratio '9:16' \

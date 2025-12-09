@@ -147,6 +147,7 @@ def main():
     save_dir = cfg.save_dir
     os.makedirs(save_dir, exist_ok=True)
     latency_log_path = os.path.join(save_dir, "adacache_latency.csv")
+    metrics_path = os.path.join(save_dir, "adacache_metrics.csv")
     sample_name = cfg.get("sample_name", None)
     prompt_as_path = cfg.get("prompt_as_path", False)
 
@@ -319,6 +320,26 @@ def main():
                     if save_path.endswith(".mp4") and cfg.get("watermark", False):
                         time.sleep(1)  # prevent loading previous generated video
                         add_watermark(save_path)
+
+                #log metrics
+                if hasattr(model, "collect_and_clear_metrics"):
+                    metrics = model.collect_and_clear_metrics()
+                    if metrics:
+                        header_needed = not os.path.exists(metrics_path)
+                        with open(metrics_path, "a", encoding="utf-8") as f:
+                            if header_needed:
+                                f.write(
+                                    "sample_idx,k,fwd_id,blk_id,block_type,which_module,"
+                                    "cache_diff,moreg,mograd,new_rate\n"
+                                )
+                            for m in metrics:
+                                f.write(
+                                    f"{start_idx},{k},"
+                                    f"{m['fwd_id']},{m['blk_id']},{m['block_type']},{m['which_module']},"
+                                    f"{m['cache_diff']:.6f},{m['moreg']:.6f},{m['mograd']:.6f},{m['new_rate']}\n"
+                                )
+                
+
         start_idx += len(batch_prompts)
     logger.info("Inference finished.")
     logger.info("Saved %s samples to %s", start_idx, save_dir)

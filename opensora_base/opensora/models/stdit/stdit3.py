@@ -112,6 +112,33 @@ class STDiT3Block(nn.Module):
         self.mograd_mul = mograd_mul
 
 
+    def collect_and_clear_metrics(self):
+        """
+        Collect AdaCache metrics from all blocks and clear their logs.
+        Returns a list of dicts with keys:
+          fwd_id, blk_id, which_module, cache_diff, moreg, mograd, new_rate, block_type
+        """
+        all_metrics = []
+
+        def _collect_from_blocks(blocks, block_type: str):
+            for block in blocks:
+                metric_log = getattr(block, "metric_log", None)
+                if not metric_log:
+                    continue
+                for m in metric_log:
+                    record = dict(m)  # shallow copy
+                    record["block_type"] = block_type  # 'spatial' or 'temporal'
+                    all_metrics.append(record)
+                # clear after collecting
+                block.metric_log = []
+
+        _collect_from_blocks(self.spatial_blocks, "spatial")
+        _collect_from_blocks(self.temporal_blocks, "temporal")
+
+        return all_metrics
+
+
+
     def t_mask_select(self, x_mask, x, masked_x, T, S):
         # x: [B, (T, S), C]
         # mased_x: [B, (T, S), C]
@@ -179,6 +206,15 @@ class STDiT3Block(nn.Module):
         if verbose:
             print(f'{which_module} - step {str(fwd_id).zfill(3)} - cachediff {cache_diff:.3f} - moreg {moreg:.3f} - mograd {mograd:.3f}' )
         
+        self.metric_log.append({
+            "fwd_id": int(fwd_id),
+            "blk_id": int(self.blk_id),
+            "which_module": str(which_module),
+            "cache_diff": float(cache_diff),
+            "moreg": float(moreg),
+            "mograd": float(mograd),
+            "new_rate": int(new_rate),
+        })
         return new_rate
 
 
@@ -337,6 +373,8 @@ class STDiT3Block(nn.Module):
 
             self.prev_compute_step = 0
 
+            self.metric_log = []
+
         return x, ada_dict
 
 
@@ -376,6 +414,9 @@ class STDiT3Config(PretrainedConfig):
         moreg_hyp=(0.385, 8, 1,2),
         mograd_mul=10,
         **kwargs,
+
+        # logs
+        self.metric_log = []
     ):
         self.input_size = input_size
         self.input_sq_size = input_sq_size

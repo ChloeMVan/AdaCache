@@ -414,9 +414,6 @@ class STDiT3Config(PretrainedConfig):
         moreg_hyp=(0.385, 8, 1,2),
         mograd_mul=10,
         **kwargs,
-
-        # logs
-        self.metric_log = []
     ):
         self.input_size = input_size
         self.input_sq_size = input_sq_size
@@ -450,6 +447,9 @@ class STDiT3Config(PretrainedConfig):
         self.moreg_hyp=moreg_hyp
         self.mograd_mul=mograd_mul
         super().__init__(**kwargs)
+
+        # logs
+        self.metric_log = []
 
 
 class STDiT3(PreTrainedModel):

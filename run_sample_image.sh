@@ -7,7 +7,7 @@ save_dir='./samples_image/gallery'
 #save_dir='./samples_image/sora'
 
 python inference.py ${config} \
-  --flash-attn True \
+  --flash-attn False \
   --layernorm-kernel False \
   --num-frames 1 \
   --resolution '1080p' \

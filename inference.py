@@ -39,12 +39,12 @@ def get_time_string() -> str:
     x = datetime.datetime.now()
     return f"{(x.year - 2000):02d}{x.month:02d}{x.day:02d}-{x.hour:02d}{x.minute:02d}{x.second:02d}"
 
-def log_latency(path: str, op_name: str, dt: float) -> None:
+def log_latency(path: str, prompt, dt: float) -> None:
     """Append a TeaCache-style latency record: timestamp,op_name,seconds."""
     # Only do file I/O on rank 0 to avoid clashes in distributed runs.
     if (not dist.is_available()) or (not dist.is_initialized()) or dist.get_rank() == 0:
         with open(path, "a", encoding="utf-8") as f:
-            f.write(f"{time.time():.6f},{op_name},{dt:.6f}\n")
+            f.write(f"{time.time():.6f},{prompt},{dt:.6f}\n")
 
 def main():
     torch.set_grad_enabled(False)
@@ -162,7 +162,7 @@ def main():
 
     # latency log
         # path for logging end-to-end generation latency (TeaCache-style)
-    latency_log_path = os.path.join(save_dir, "adacache_latency.csv")
+    latency_log_path = os.path.join(save_dir, "latency.csv")
 
 
     # == Iter over all samples ==
@@ -312,7 +312,7 @@ def main():
                 if device == "cuda":
                     torch.cuda.synchronize()
                 dt = time.perf_counter() - t0
-                log_latency(latency_log_path, "generate_compute", dt)
+                log_latency(latency_log_path, prompt, dt)
 
                 for idx, batch_prompt in enumerate(batch_prompts):
                     if verbose >= 2:

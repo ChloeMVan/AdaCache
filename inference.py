@@ -45,7 +45,7 @@ def log_latency(path: str, prompt, dt: float) -> None:
     if (not dist.is_available()) or (not dist.is_initialized()) or dist.get_rank() == 0:
         with open(path, "a", encoding="utf-8") as f:
             f.write(f"Prompt: \"{prompt}\"\n")
-            f.write(f"{time.time():.6f},{dt:.6f}\n")
+            f.write(f"Current Time: {time.time():.3f}, Latency: {dt:.6f}\n")
 
 def main():
     torch.set_grad_enabled(False)
@@ -147,7 +147,7 @@ def main():
     save_fps = cfg.get("save_fps", fps // cfg.get("frame_interval", 1))
     multi_resolution = cfg.get("multi_resolution", None)
     batch_size = cfg.get("batch_size", 1)
-    num_sample = cfg.get("num_sample", 1)
+    num_sample = cfg.get("num_sample", 2)
     loop = cfg.get("loop", 1)
     condition_frame_length = cfg.get("condition_frame_length", 5)
     condition_frame_edit = cfg.get("condition_frame_edit", 0.0)
@@ -331,7 +331,7 @@ def main():
                     )
 
                     # dump metrics
-                    metrics_path = os.path.join(save_dir, "step_metrics.txt")
+                    metrics_path = os.path.join(save_dir, "adacache_step_metrics.txt")
                     if hasattr(model, "dump_cache_metrics"):
                         model.dump_cache_metrics(metrics_path, batch_prompt)
 

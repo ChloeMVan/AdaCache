@@ -332,7 +332,7 @@ def main():
                     )
 
                     # dump metrics
-                    metrics_path = os.path.join(save_dir, "adacache_step_metrics.txt")
+                    metrics_path =  "./samples_video/metrics/adacache_step_metrics.txt"
                     if hasattr(model, "dump_cache_metrics"):
                         model.dump_cache_metrics(metrics_path, batch_prompt)
 

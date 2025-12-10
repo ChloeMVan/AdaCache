@@ -585,9 +585,9 @@ class STDiT3(PreTrainedModel):
         self.num_sampling_steps = config.num_sampling_steps
 
 
-    def dump_cache_metrics(self, filepath):
+    def dump_cache_metrics(self, filepath, prompt):
         """Write per-step averaged cache_diff + new_rate to a CSV file."""
-        header_needed = not os.path.exists(filepath)
+        header_needed = not os.path.exists("'" + prompt + "'/" + filepath)
         with open(filepath, "a", encoding="utf-8") as f:
             if header_needed:
                 f.write("step,cache_diff,new_rate\n")

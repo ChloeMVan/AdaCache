@@ -306,9 +306,9 @@ def main():
                     )
 
                     # dump metrics
-                    metrics_path = os.path.join(save_dir, "adacache_step_metrics.csv")
+                    metrics_path = os.path.join(save_dir, "step_metrics.csv")
                     if hasattr(model, "dump_cache_metrics"):
-                        model.dump_cache_metrics(metrics_path)
+                        model.dump_cache_metrics(metrics_path, batch_prompt)
 
                     if save_path.endswith(".mp4") and cfg.get("watermark", False):
                         time.sleep(1)  # prevent loading previous generated video

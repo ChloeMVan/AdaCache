@@ -111,6 +111,8 @@ class STDiT3Block(nn.Module):
         self.moreg_hyp = moreg_hyp
         self.mograd_mul = mograd_mul
 
+        self.metric_log = []
+
 
     def collect_and_clear_metrics(self):
         """
@@ -449,13 +451,16 @@ class STDiT3Config(PretrainedConfig):
         super().__init__(**kwargs)
 
         # logs
-        self.metric_log = []
+        # self.metric_log = []
 
 
 class STDiT3(PreTrainedModel):
     config_class = STDiT3Config
 
     def __init__(self, config):
+
+        # self.metric_log = []
+
         super().__init__(config)
         self.pred_sigma = config.pred_sigma
         self.in_channels = config.in_channels

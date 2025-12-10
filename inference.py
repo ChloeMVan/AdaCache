@@ -164,7 +164,9 @@ def main():
 
     # latency log
         # path for logging end-to-end generation latency (TeaCache-style)
-    latency_log_path = "./samples_video/metrics/latency.txt"
+    # latency_log_path = "./samples_video/metrics/latency.txt"
+    latency_log_path = os.path.join(save_dir, "..", "metrics", "latency.txt")
+
 
 
     # == Iter over all samples ==
@@ -332,7 +334,8 @@ def main():
                     )
 
                     # dump metrics
-                    metrics_path =  "./samples_video/metrics/adacache_step_metrics.txt"
+                    metrics_path = os.path.join(save_dir, "..", "metrics", "adacache_step_metrics.txt")
+
                     if hasattr(model, "dump_cache_metrics"):
                         model.dump_cache_metrics(metrics_path, batch_prompt)
 

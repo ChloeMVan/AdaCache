@@ -88,7 +88,7 @@ class Latte(DiT):
 def Latte_XL_2(from_pretrained=None, **kwargs):
     model = Latte(
         depth=28,
-        hidden_size=1152,
+        hidden_size=1152, 
         patch_size=(1, 2, 2),
         num_heads=16,
         **kwargs,

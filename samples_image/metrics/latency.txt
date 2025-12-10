@@ -58,3 +58,11 @@ Prompt: "a hot dog on the top of a pizza, front view"
 Current Time: 1765404856.333, Latency: 4.632998
 Prompt: "a hot dog on the top of a pizza, front view aesthetic score: 6.5."
 Current Time: 1765404861.166, Latency: 4.649772
+Prompt: "A lightning striking atop of eiffel tower, dark clouds in the sky"
+Current Time: 1765405585.626, Latency: 5.204316
+Prompt: "a lightning striking atop of eiffel tower, dark clouds in the sky aesthetic score: 6.5."
+Current Time: 1765405590.527, Latency: 4.700178
+Prompt: "An epic tornado attacking above a glowing city at night, the tornado is made of smoke"
+Current Time: 1765405595.407, Latency: 4.673842
+Prompt: "an epic tornado attacking above a glowing city at night, the tornado is made of smoke aesthetic score: 6.5."
+Current Time: 1765405600.298, Latency: 4.679356

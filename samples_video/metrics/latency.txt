@@ -12,3 +12,11 @@ Prompt: "a horse galloping across an open field aesthetic score: 6.5. motion sco
 Current Time: 1765405077.356, Latency: 23.449413
 Prompt: "A person is bungee jumping"
 Current Time: 1765405102.064, Latency: 23.477428
+Prompt: "A lightning striking atop of eiffel tower, dark clouds in the sky"
+Current Time: 1765405802.162, Latency: 20.788103
+Prompt: "a lightning striking atop of eiffel tower, dark clouds in the sky aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765405825.044, Latency: 21.960158
+Prompt: "An epic tornado attacking above a glowing city at night, the tornado is made of smoke"
+Current Time: 1765405846.751, Latency: 20.530528
+Prompt: "an epic tornado attacking above a glowing city at night, the tornado is made of smoke aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765405868.306, Latency: 20.511962

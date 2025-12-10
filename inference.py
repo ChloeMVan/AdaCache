@@ -2,6 +2,7 @@ import os
 import time
 from pprint import pformat
 import datetime
+from pathlib import Path
 
 import colossalai
 import torch
@@ -165,7 +166,7 @@ def main():
     # latency log
         # path for logging end-to-end generation latency (TeaCache-style)
     # latency_log_path = "./samples_video/metrics/latency.txt"
-    latency_log_path = os.path.join(save_dir, "..", "metrics", "latency.txt")
+    latency_log_path = str(Path(save_dir).parent / "metrics" / "latency.txt")
 
 
 
@@ -334,8 +335,9 @@ def main():
                     )
 
                     # dump metrics
-                    metrics_path = os.path.join(save_dir, "..", "metrics", "adacache_step_metrics.txt")
-
+                    # metrics_path = os.path.join(save_dir, "..", "metrics", "adacache_step_metrics.txt")
+                    
+                    metrics_path = str(Path(save_dir).parent / "metrics" / "adacache_step_metrics.txt")
                     if hasattr(model, "dump_cache_metrics"):
                         model.dump_cache_metrics(metrics_path, batch_prompt)
 

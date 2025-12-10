@@ -208,8 +208,8 @@ class STDiT3Block(nn.Module):
         elif cache_diff < metric_thres[4]: new_rate = cache_rates[4]
         else: new_rate = cache_rates[-1]
 
-        if verbose:
-            print(f'{which_module} - step {str(fwd_id).zfill(3)} - cachediff {cache_diff:.3f} - moreg {moreg:.3f} - mograd {mograd:.3f}' )
+        #if verbose:
+            #print(f'{which_module} - step {str(fwd_id).zfill(3)} - cachediff {cache_diff:.3f} - moreg {moreg:.3f} - mograd {mograd:.3f}' )
         
         if "step_metrics" not in ada_dict:
             ada_dict["step_metrics"] = []

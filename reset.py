@@ -20,15 +20,26 @@ def remove(directory_path):
     except OSError as e:
         print(f"Error deleting directory: {e}")
 
+def add(path):
+    try:
+        with open(path, "x") as f:
+            print("File 'new_exclusive_file.txt' created successfully.")
+    except FileExistsError:
+        print("Error: File 'new_exclusive_file.txt' already exists.")
+
 empty_directory("samples_video/gallery")
 empty_directory("samples_video/metrics")
 
 empty_directory("samples_image/gallery")
 empty_directory("samples_image/gallery_backup")
 empty_directory("samples_image/metrics")
+add("samples_image/metrics/latency.txt")
+add("samples_image/metrics/adacache_metrics.csv")
 
 empty_directory("samples_video/gallery")
 empty_directory("samples_video/metrics")
+add("samples_video/metrics/latency.txt")
+add("samples_video/metrics/adacache_metrics.csv")
 
 d = "_d"
 remove("samples_image/gallery" + d)

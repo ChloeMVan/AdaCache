@@ -306,7 +306,7 @@ def main():
                     )
 
                     # dump metrics
-                    metrics_path = os.path.join(save_dir, "step_metrics.csv")
+                    metrics_path = os.path.join(save_dir, "step_metrics.txt")
                     if hasattr(model, "dump_cache_metrics"):
                         model.dump_cache_metrics(metrics_path, batch_prompt)
 

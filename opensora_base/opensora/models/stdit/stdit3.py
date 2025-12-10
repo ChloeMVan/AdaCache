@@ -31,6 +31,9 @@ from opensora.models.layers.blocks import (
 )
 from opensora.registry import MODELS
 from opensora.utils.ckpt_utils import load_checkpoint
+import os
+
+
 
 
 class STDiT3Block(nn.Module):
@@ -111,7 +114,7 @@ class STDiT3Block(nn.Module):
         self.moreg_hyp = moreg_hyp
         self.mograd_mul = mograd_mul
 
-        self.metric_log = []
+        # self.metric_log = []
 
 
     def collect_and_clear_metrics(self):
@@ -208,14 +211,12 @@ class STDiT3Block(nn.Module):
         if verbose:
             print(f'{which_module} - step {str(fwd_id).zfill(3)} - cachediff {cache_diff:.3f} - moreg {moreg:.3f} - mograd {mograd:.3f}' )
         
-        self.metric_log.append({
-            "fwd_id": int(fwd_id),
-            "blk_id": int(self.blk_id),
-            "which_module": str(which_module),
-            "cache_diff": float(cache_diff),
-            "moreg": float(moreg),
-            "mograd": float(mograd),
-            "new_rate": int(new_rate),
+        if "step_metrics" not in ada_dict:
+            ada_dict["step_metrics"] = []
+        ada_dict["step_metrics"].append({
+            "step": int(fwd_id),             # diffusion step index
+            "cache_diff": float(cache_diff), # single averaged metric
+            "new_rate": int(new_rate),       # chosen cache rate
         })
         return new_rate
 
@@ -375,7 +376,7 @@ class STDiT3Block(nn.Module):
 
             self.prev_compute_step = 0
 
-            self.metric_log = []
+            # self.metric_log = []
 
         return x, ada_dict
 
@@ -460,6 +461,7 @@ class STDiT3(PreTrainedModel):
     def __init__(self, config):
 
         # self.metric_log = []
+        self.cache_metric_log = []
 
         super().__init__(config)
         self.pred_sigma = config.pred_sigma
@@ -582,6 +584,17 @@ class STDiT3(PreTrainedModel):
         self.attn_cache_rate = 1
         self.num_sampling_steps = config.num_sampling_steps
 
+
+    def dump_cache_metrics(self, filepath):
+        """Write per-step averaged cache_diff + new_rate to a CSV file."""
+        header_needed = not os.path.exists(filepath)
+        with open(filepath, "a", encoding="utf-8") as f:
+            if header_needed:
+                f.write("step,cache_diff,new_rate\n")
+            for m in self.cache_metric_log:
+                f.write(f"{m['step']},{m['cache_diff']:.8f},{m['new_rate']}\n")
+            # clear after dumping so we don't duplicate on the next call
+            self.cache_metric_log = []
 
     def initialize_weights(self):
         # Initialize transformer layers:
@@ -716,6 +729,10 @@ class STDiT3(PreTrainedModel):
             x = gather_forward_split_backward(x, get_sequence_parallel_group(), dim=2, grad_scale="up")
             S = S * dist.get_world_size(get_sequence_parallel_group())
             x = rearrange(x, "B T S C -> B (T S) C", T=T, S=S)
+
+        if "step_metrics" in ada_dict:
+            self.cache_metric_log.extend(ada_dict["step_metrics"])
+            ada_dict["step_metrics"] = []
 
         # === final layer ===
         x = self.final_layer(x, t, x_mask, t0, T, S)

@@ -590,7 +590,7 @@ class STDiT3(PreTrainedModel):
         header_needed = not os.path.exists(filepath)
         with open(filepath, "a", encoding="utf-8") as f:
             if header_needed:
-                f.write(prompt + "\n")
+                f.write(f"Prompt: {prompt}\n")
                 f.write("step,cache_diff,new_rate\n")
             for m in self.cache_metric_log:
                 f.write(f"{m['step']},{m['cache_diff']:.8f},{m['new_rate']}\n")

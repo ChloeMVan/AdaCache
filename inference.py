@@ -44,7 +44,8 @@ def log_latency(path: str, prompt, dt: float) -> None:
     # Only do file I/O on rank 0 to avoid clashes in distributed runs.
     if (not dist.is_available()) or (not dist.is_initialized()) or dist.get_rank() == 0:
         with open(path, "a", encoding="utf-8") as f:
-            f.write(f"{time.time():.6f},{prompt},{dt:.6f}\n")
+            f.write(f"Prompt: \"{prompt}\"\n")
+            f.write(f"{time.time():.6f},{dt:.6f}\n")
 
 def main():
     torch.set_grad_enabled(False)

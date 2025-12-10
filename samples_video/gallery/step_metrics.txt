@@ -1,0 +1,10 @@
+Prompt: a japanese tram glides through the snowy streets of a city, its sleek design cutting through the falling snowflakes with grace. the tram's illuminated windows cast a warm glow onto the snowy surroundings, creating a cozy atmosphere inside. snowflakes dance in the air, swirling around the tram as it moves along its tracks. outside, the city is blanketed in a layer of snow, transforming familiar streets into a winter wonderland. cherry blossom trees, now bare, stand quietly along the tram tracks, their branches dusted with snow. people hurry along the sidewalks, bundled up against the cold, while the tram's bell rings softly, announcing its arrival at each stop. aesthetic score: 6.5. motion score: 5.0.
+step, cache_diff, mo_reg, mo_grad, new_rate
+2,0.621,1.000, 0.000, 3
+5,0.242,1.000, 0.000, 3
+8,0.148,1.000, 0.000, 3
+11,0.222,2.109, -1.586, 3
+14,0.045,0.523, 0.000, 10
+24,0.034,0.523, -0.113, 10
+29,0.025,0.410, -0.277, 12
+30,0.003,0.130, -0.021, 12

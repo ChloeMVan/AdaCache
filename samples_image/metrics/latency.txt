@@ -1,0 +1,320 @@
+Prompt: "golden fish swimming in the ocean."
+Current Time: 1765396311.239, Latency: 5.342459
+Prompt: "golden fish swimming in the ocean. aesthetic score: 6.5."
+Current Time: 1765396316.155, Latency: 4.785801
+Prompt: "The bund Shanghai, oil painting"
+Current Time: 1765396321.084, Latency: 4.832430
+Prompt: "the bund shanghai, oil painting aesthetic score: 6.5."
+Current Time: 1765396326.032, Latency: 4.744616
+Prompt: "An Iron man is playing the electronic guitar, high electronic guitar."
+Current Time: 1765396331.021, Latency: 4.783303
+Prompt: "an iron man is playing the electronic guitar, high electronic guitar. aesthetic score: 6.5."
+Current Time: 1765396335.927, Latency: 4.765863
+Prompt: "A cute fluffy panda eating Chinese food in a restaurant"
+Current Time: 1765396340.829, Latency: 4.749970
+Prompt: "a cute fluffy panda eating chinese food in a restaurant aesthetic score: 6.5."
+Current Time: 1765396345.739, Latency: 4.778582
+Prompt: "A squirrel eating a burger."
+Current Time: 1765396350.691, Latency: 4.805044
+Prompt: "a squirrel eating a burger. aesthetic score: 6.5."
+Current Time: 1765396355.601, Latency: 4.717555
+Prompt: "A beautiful coastal beach in spring, waves lapping on sand, black and white"
+Current Time: 1765396360.535, Latency: 4.706015
+Prompt: "a beautiful coastal beach in spring, waves lapping on sand, black and white aesthetic score: 6.5."
+Current Time: 1765396365.487, Latency: 4.765497
+Prompt: "A beautiful coastal beach in spring, waves lapping on sand, watercolor painting"
+Current Time: 1765396370.438, Latency: 4.754104
+Prompt: "a beautiful coastal beach in spring, waves lapping on sand, watercolor painting aesthetic score: 6.5."
+Current Time: 1765396375.294, Latency: 4.748777
+Prompt: "An astronaut flying in space, surrealism style"
+Current Time: 1765396380.185, Latency: 4.784092
+Prompt: "an astronaut flying in space, surrealism style aesthetic score: 6.5."
+Current Time: 1765396385.133, Latency: 4.757051
+Prompt: "The bund Shanghai, pixel art"
+Current Time: 1765396390.121, Latency: 4.761010
+Prompt: "the bund shanghai, pixel art aesthetic score: 6.5."
+Current Time: 1765396395.027, Latency: 4.751354
+Prompt: "A panda drinking coffee in a cafe in Paris, Van Gogh style"
+Current Time: 1765396399.881, Latency: 4.742692
+Prompt: "a panda drinking coffee in a cafe in paris, van gogh style aesthetic score: 6.5."
+Current Time: 1765396404.892, Latency: 4.784477
+Prompt: "cliff"
+Current Time: 1765396409.853, Latency: 4.750655
+Prompt: "cliff aesthetic score: 6.5."
+Current Time: 1765396414.914, Latency: 4.811289
+Prompt: "train railway"
+Current Time: 1765396419.890, Latency: 4.750899
+Prompt: "train railway aesthetic score: 6.5."
+Current Time: 1765396424.895, Latency: 4.780626
+Prompt: "mountain"
+Current Time: 1765396429.858, Latency: 4.771447
+Prompt: "mountain aesthetic score: 6.5."
+Current Time: 1765396434.794, Latency: 4.747396
+Prompt: "castle"
+Current Time: 1765396439.746, Latency: 4.764085
+Prompt: "castle aesthetic score: 6.5."
+Current Time: 1765396444.717, Latency: 4.769052
+Prompt: "football field"
+Current Time: 1765396449.773, Latency: 4.837515
+Prompt: "football field aesthetic score: 6.5."
+Current Time: 1765396454.727, Latency: 4.738748
+Prompt: "a yellow suitcase"
+Current Time: 1765396459.718, Latency: 4.744367
+Prompt: "a yellow suitcase aesthetic score: 6.5."
+Current Time: 1765396464.592, Latency: 4.731920
+Prompt: "a blue suitcase"
+Current Time: 1765396469.517, Latency: 4.744786
+Prompt: "a blue suitcase aesthetic score: 6.5."
+Current Time: 1765396474.388, Latency: 4.726078
+Prompt: "a blue car"
+Current Time: 1765396479.236, Latency: 4.691475
+Prompt: "a blue car aesthetic score: 6.5."
+Current Time: 1765396484.132, Latency: 4.756167
+Prompt: "a green clock"
+Current Time: 1765396488.982, Latency: 4.719337
+Prompt: "a green clock aesthetic score: 6.5."
+Current Time: 1765396493.976, Latency: 4.753541
+Prompt: "a purple bowl"
+Current Time: 1765396498.900, Latency: 4.748761
+Prompt: "a purple bowl aesthetic score: 6.5."
+Current Time: 1765396503.712, Latency: 4.700426
+Prompt: "a train accelerating to gain speed"
+Current Time: 1765396508.623, Latency: 4.765573
+Prompt: "a train accelerating to gain speed aesthetic score: 6.5."
+Current Time: 1765396513.558, Latency: 4.728726
+Prompt: "a person playing guitar"
+Current Time: 1765396518.533, Latency: 4.771935
+Prompt: "a person playing guitar aesthetic score: 6.5."
+Current Time: 1765396523.504, Latency: 4.779980
+Prompt: "an airplane soaring through a clear blue sky"
+Current Time: 1765396528.355, Latency: 4.723831
+Prompt: "an airplane soaring through a clear blue sky aesthetic score: 6.5."
+Current Time: 1765396533.167, Latency: 4.743681
+Prompt: "a bicycle slowing down to stop"
+Current Time: 1765396537.946, Latency: 4.703099
+Prompt: "a bicycle slowing down to stop aesthetic score: 6.5."
+Current Time: 1765396542.960, Latency: 4.783986
+Prompt: "an airplane landing smoothly on a runway"
+Current Time: 1765396547.940, Latency: 4.739497
+Prompt: "an airplane landing smoothly on a runway aesthetic score: 6.5."
+Current Time: 1765396552.868, Latency: 4.780950
+Prompt: "A person is driving car"
+Current Time: 1765396557.757, Latency: 4.784394
+Prompt: "a person is driving car aesthetic score: 6.5."
+Current Time: 1765396562.700, Latency: 4.770681
+Prompt: "A person is shooting goal (soccer)"
+Current Time: 1765396567.597, Latency: 4.742127
+Prompt: "a person is shooting goal soccer aesthetic score: 6.5."
+Current Time: 1765396572.570, Latency: 4.735208
+Prompt: "A person is dancing ballet"
+Current Time: 1765396577.568, Latency: 4.772854
+Prompt: "a person is dancing ballet aesthetic score: 6.5."
+Current Time: 1765396582.583, Latency: 4.746510
+Prompt: "A person is pushing cart"
+Current Time: 1765396587.574, Latency: 4.725358
+Prompt: "a person is pushing cart aesthetic score: 6.5."
+Current Time: 1765396592.628, Latency: 4.785668
+Prompt: "A person is riding scooter"
+Current Time: 1765396597.599, Latency: 4.708835
+Prompt: "a person is riding scooter aesthetic score: 6.5."
+Current Time: 1765396602.593, Latency: 4.753264
+Prompt: "Balloon full of water exploding in extreme slow motion."
+Current Time: 1765396607.536, Latency: 4.703607
+Prompt: "balloon full of water exploding in extreme slow motion. aesthetic score: 6.5."
+Current Time: 1765396612.505, Latency: 4.777394
+Prompt: "Vincent van Gogh is painting in the room"
+Current Time: 1765396617.405, Latency: 4.713218
+Prompt: "vincent van gogh is painting in the room aesthetic score: 6.5."
+Current Time: 1765396622.338, Latency: 4.744209
+Prompt: "A raccoon dressed in suit playing the trumpet, stage background"
+Current Time: 1765396627.359, Latency: 4.829118
+Prompt: "a raccoon dressed in suit playing the trumpet, stage background aesthetic score: 6.5."
+Current Time: 1765396632.219, Latency: 4.747666
+Prompt: "An astronaut flying in space."
+Current Time: 1765396637.090, Latency: 4.749305
+Prompt: "an astronaut flying in space. aesthetic score: 6.5."
+Current Time: 1765396642.001, Latency: 4.738747
+Prompt: "The bund Shanghai, vibrant color"
+Current Time: 1765396646.924, Latency: 4.739800
+Prompt: "the bund shanghai, vibrant color aesthetic score: 6.5."
+Current Time: 1765396651.837, Latency: 4.738610
+Prompt: "a cow bending down to drink water from a river"
+Current Time: 1765396656.763, Latency: 4.746262
+Prompt: "a cow bending down to drink water from a river aesthetic score: 6.5."
+Current Time: 1765396661.746, Latency: 4.759680
+Prompt: "a person walking in the snowstorm"
+Current Time: 1765396666.749, Latency: 4.747633
+Prompt: "a person walking in the snowstorm aesthetic score: 6.5."
+Current Time: 1765396671.807, Latency: 4.802581
+Prompt: "an elephant running to join a herd of its kind"
+Current Time: 1765396676.841, Latency: 4.764684
+Prompt: "an elephant running to join a herd of its kind aesthetic score: 6.5."
+Current Time: 1765396681.828, Latency: 4.785772
+Prompt: "a dog running happily"
+Current Time: 1765396686.706, Latency: 4.777101
+Prompt: "a dog running happily aesthetic score: 6.5."
+Current Time: 1765396691.713, Latency: 4.773502
+Prompt: "a cow chewing cud while resting in a tranquil barn"
+Current Time: 1765396696.723, Latency: 4.773770
+Prompt: "a cow chewing cud while resting in a tranquil barn aesthetic score: 6.5."
+Current Time: 1765396701.701, Latency: 4.758769
+Prompt: "a wine glass and a chair"
+Current Time: 1765396706.636, Latency: 4.711225
+Prompt: "a wine glass and a chair aesthetic score: 6.5."
+Current Time: 1765396711.478, Latency: 4.678642
+Prompt: "a car and a motorcycle"
+Current Time: 1765396716.319, Latency: 4.687976
+Prompt: "a car and a motorcycle aesthetic score: 6.5."
+Current Time: 1765396721.228, Latency: 4.679623
+Prompt: "a bowl and a remote"
+Current Time: 1765396726.190, Latency: 4.722563
+Prompt: "a bowl and a remote aesthetic score: 6.5."
+Current Time: 1765396731.180, Latency: 4.769886
+Prompt: "a tie and a suitcase"
+Current Time: 1765396736.209, Latency: 4.766842
+Prompt: "a tie and a suitcase aesthetic score: 6.5."
+Current Time: 1765396741.189, Latency: 4.761259
+Prompt: "a frisbee and skis"
+Current Time: 1765396746.198, Latency: 4.756308
+Prompt: "a frisbee and skis aesthetic score: 6.5."
+Current Time: 1765396751.162, Latency: 4.727462
+Prompt: "a remote"
+Current Time: 1765396756.106, Latency: 4.760168
+Prompt: "a remote aesthetic score: 6.5."
+Current Time: 1765396761.044, Latency: 4.679453
+Prompt: "broccoli"
+Current Time: 1765396765.994, Latency: 4.710352
+Prompt: "broccoli aesthetic score: 6.5."
+Current Time: 1765396770.862, Latency: 4.684507
+Prompt: "a skateboard"
+Current Time: 1765396775.656, Latency: 4.696694
+Prompt: "a skateboard aesthetic score: 6.5."
+Current Time: 1765396780.615, Latency: 4.725798
+Prompt: "a parking meter"
+Current Time: 1765396785.575, Latency: 4.728572
+Prompt: "a parking meter aesthetic score: 6.5."
+Current Time: 1765396790.610, Latency: 4.771995
+Prompt: "a giraffe"
+Current Time: 1765396795.620, Latency: 4.750015
+Prompt: "a giraffe aesthetic score: 6.5."
+Current Time: 1765396800.626, Latency: 4.757125
+Prompt: "A fat rabbit wearing a purple robe walking through a fantasy landscape."
+Current Time: 1765396805.612, Latency: 4.730280
+Prompt: "a fat rabbit wearing a purple robe walking through a fantasy landscape. aesthetic score: 6.5."
+Current Time: 1765396810.551, Latency: 4.746639
+Prompt: "Few big purple plums rotating on the turntable. water drops appear on the skin during rotation. isolated on the white background. close-up. macro."
+Current Time: 1765396815.482, Latency: 4.722737
+Prompt: "few big purple plums rotating on the turntable. water drops appear on the skin during rotation. isolated on the white background. close-up. macro. aesthetic score: 6.5."
+Current Time: 1765396820.258, Latency: 4.710365
+Prompt: "A corgi's head depicted as an explosion of a nebula"
+Current Time: 1765396825.048, Latency: 4.744225
+Prompt: "a corgi's head depicted as an explosion of a nebula aesthetic score: 6.5."
+Current Time: 1765396829.936, Latency: 4.744366
+Prompt: "A lightning striking atop of eiffel tower, dark clouds in the sky"
+Current Time: 1765396834.799, Latency: 4.716958
+Prompt: "a lightning striking atop of eiffel tower, dark clouds in the sky aesthetic score: 6.5."
+Current Time: 1765396839.733, Latency: 4.735731
+Prompt: "An oil painting of a couple in formal evening wear going home get caught in a heavy downpour with umbrellas"
+Current Time: 1765396844.672, Latency: 4.738078
+Prompt: "an oil painting of a couple in formal evening wear going home get caught in a heavy downpour with umbrellas aesthetic score: 6.5."
+Current Time: 1765396849.672, Latency: 4.741275
+Prompt: "bedroom"
+Current Time: 1765396854.682, Latency: 4.739764
+Prompt: "bedroom aesthetic score: 6.5."
+Current Time: 1765396859.637, Latency: 4.730143
+Prompt: "football field"
+Current Time: 1765396864.622, Latency: 4.754883
+Prompt: "football field aesthetic score: 6.5."
+Current Time: 1765396869.603, Latency: 4.755437
+Prompt: "indoor library"
+Current Time: 1765396874.542, Latency: 4.713986
+Prompt: "indoor library aesthetic score: 6.5."
+Current Time: 1765396879.582, Latency: 4.809383
+Prompt: "skyscraper"
+Current Time: 1765396884.589, Latency: 4.776214
+Prompt: "skyscraper aesthetic score: 6.5."
+Current Time: 1765396889.508, Latency: 4.695011
+Prompt: "downtown"
+Current Time: 1765396894.502, Latency: 4.760009
+Prompt: "downtown aesthetic score: 6.5."
+Current Time: 1765396899.427, Latency: 4.699354
+Prompt: "a potted plant on the left of a remote, front view"
+Current Time: 1765396904.399, Latency: 4.727198
+Prompt: "a potted plant on the left of a remote, front view aesthetic score: 6.5."
+Current Time: 1765396909.371, Latency: 4.710428
+Prompt: "a fork on the right of a knife, front view"
+Current Time: 1765396914.347, Latency: 4.716154
+Prompt: "a fork on the right of a knife, front view aesthetic score: 6.5."
+Current Time: 1765396919.205, Latency: 4.725164
+Prompt: "a baseball bat on the left of a baseball glove, front view"
+Current Time: 1765396924.074, Latency: 4.698542
+Prompt: "a baseball bat on the left of a baseball glove, front view aesthetic score: 6.5."
+Current Time: 1765396929.051, Latency: 4.766092
+Prompt: "a microwave on the top of an oven, front view"
+Current Time: 1765396933.978, Latency: 4.770699
+Prompt: "a microwave on the top of an oven, front view aesthetic score: 6.5."
+Current Time: 1765396938.965, Latency: 4.748864
+Prompt: "a toaster on the top of a microwave, front view"
+Current Time: 1765396943.962, Latency: 4.752861
+Prompt: "a toaster on the top of a microwave, front view aesthetic score: 6.5."
+Current Time: 1765396948.917, Latency: 4.727359
+Prompt: "a truck turning a corner"
+Current Time: 1765396953.915, Latency: 4.766132
+Prompt: "a truck turning a corner aesthetic score: 6.5."
+Current Time: 1765396958.861, Latency: 4.719546
+Prompt: "a motorcycle cruising along a coastal highway"
+Current Time: 1765396963.864, Latency: 4.786359
+Prompt: "a motorcycle cruising along a coastal highway aesthetic score: 6.5."
+Current Time: 1765396968.802, Latency: 4.722551
+Prompt: "a bus stuck in traffic during rush hour"
+Current Time: 1765396973.779, Latency: 4.770661
+Prompt: "a bus stuck in traffic during rush hour aesthetic score: 6.5."
+Current Time: 1765396978.795, Latency: 4.785101
+Prompt: "a car slowing down to stop"
+Current Time: 1765396983.746, Latency: 4.742197
+Prompt: "a car slowing down to stop aesthetic score: 6.5."
+Current Time: 1765396988.701, Latency: 4.707251
+Prompt: "a bicycle gliding through a snowy field"
+Current Time: 1765396993.647, Latency: 4.702835
+Prompt: "a bicycle gliding through a snowy field aesthetic score: 6.5."
+Current Time: 1765396998.565, Latency: 4.737954
+Prompt: "In a still frame, gas station"
+Current Time: 1765397003.430, Latency: 4.723959
+Prompt: "in a still frame, gas station aesthetic score: 6.5."
+Current Time: 1765397008.418, Latency: 4.738236
+Prompt: "In a still frame, within the desolate desert, an oasis unfolded, characterized by the stoic presence of palm trees and a motionless, glassy pool of water"
+Current Time: 1765397013.383, Latency: 4.719472
+Prompt: "in a still frame, within the desolate desert, an oasis unfolded, characterized by the stoic presence of palm trees and a motionless, glassy pool of water aesthetic score: 6.5."
+Current Time: 1765397018.303, Latency: 4.741829
+Prompt: "A tranquil tableau of palace"
+Current Time: 1765397023.223, Latency: 4.736430
+Prompt: "a tranquil tableau of palace aesthetic score: 6.5."
+Current Time: 1765397028.174, Latency: 4.739930
+Prompt: "A tranquil tableau of bar"
+Current Time: 1765397033.104, Latency: 4.714660
+Prompt: "a tranquil tableau of bar aesthetic score: 6.5."
+Current Time: 1765397038.074, Latency: 4.749180
+Prompt: "A tranquil tableau of a peaceful orchid garden showcased a variety of delicate blooms"
+Current Time: 1765397043.003, Latency: 4.721532
+Prompt: "a tranquil tableau of a peaceful orchid garden showcased a variety of delicate blooms aesthetic score: 6.5."
+Current Time: 1765397047.932, Latency: 4.716033
+Prompt: "Gwen Stacy reading a book, with an intense shaking effect"
+Current Time: 1765397052.874, Latency: 4.729090
+Prompt: "gwen stacy reading a book, with an intense shaking effect aesthetic score: 6.5."
+Current Time: 1765397057.715, Latency: 4.692046
+Prompt: "The bund Shanghai, with an intense shaking effect"
+Current Time: 1765397062.623, Latency: 4.715900
+Prompt: "the bund shanghai, with an intense shaking effect aesthetic score: 6.5."
+Current Time: 1765397067.498, Latency: 4.734866
+Prompt: "A couple in formal evening wear going home get caught in a heavy downpour with umbrellas, in super slow motion"
+Current Time: 1765397072.371, Latency: 4.717072
+Prompt: "a couple in formal evening wear going home get caught in a heavy downpour with umbrellas, in super slow motion aesthetic score: 6.5."
+Current Time: 1765397077.283, Latency: 4.692226
+Prompt: "a shark is swimming in the ocean, zoom out"
+Current Time: 1765397082.279, Latency: 4.751297
+Prompt: "a shark is swimming in the ocean, zoom out aesthetic score: 6.5."
+Current Time: 1765397087.175, Latency: 4.753752
+Prompt: "The bund Shanghai, racking focus"
+Current Time: 1765397092.110, Latency: 4.812419
+Prompt: "the bund shanghai, racking focus aesthetic score: 6.5."
+Current Time: 1765397097.005, Latency: 4.742172

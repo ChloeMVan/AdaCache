@@ -216,7 +216,8 @@ class STDiT3Block(nn.Module):
         ada_dict["step_metrics"].append({
             "step": int(fwd_id),             # diffusion step index
             "cache_diff": float(cache_diff), # single averaged metric
-            "new_rate": int(new_rate),       # chosen cache rate
+            "mo_reg": float(moreg), 
+            "new_rate": int(new_rate)       # chosen cache rate
         })
         return new_rate
 
@@ -591,9 +592,9 @@ class STDiT3(PreTrainedModel):
         with open(filepath, "a", encoding="utf-8") as f:
             if header_needed:
                 f.write(f"Prompt: {prompt}\n")
-                f.write("step,cache_diff,new_rate\n")
+                f.write("step, cache_diff, mo_reg, new_rate\n")
             for m in self.cache_metric_log:
-                f.write(f"{m['step']},{m['cache_diff']:.8f},{m['new_rate']}\n")
+                f.write(f"{m['step']},{m['cache_diff']:.3f},{m['mo_reg']:.3f},{m['new_rate']}\n")
             # clear after dumping so we don't duplicate on the next call
             self.cache_metric_log = []
 

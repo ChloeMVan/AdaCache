@@ -592,12 +592,12 @@ class STDiT3(PreTrainedModel):
         header_needed = not os.path.exists(filepath)
         start = None
         with open(filepath, "a", encoding="utf-8") as f:
-            if header_needed:
+            # if header_needed:
+            for m in self.cache_metric_log:
                 if start == None or m['step'] == start:
                     f.write(f"Prompt: {prompt}\n")
                     f.write("step, cache_diff, mo_reg, mo_grad, new_rate\n")
                     start = m['step']
-            for m in self.cache_metric_log:
                 f.write(f"{m['step']},{m['cache_diff']:.3f},{m['mo_reg']:.3f}, {m['mo_grad']:.3f}, {m['new_rate']}\n")
             # clear after dumping so we don't duplicate on the next call
             self.cache_metric_log = []

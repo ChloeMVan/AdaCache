@@ -1,0 +1,8 @@
+Prompt: "A lightning striking atop of eiffel tower, dark clouds in the sky"
+Current Time: 1765406910.926, Latency: 5.282385
+Prompt: "a lightning striking atop of eiffel tower, dark clouds in the sky aesthetic score: 6.5."
+Current Time: 1765406915.913, Latency: 4.788131
+Prompt: "An epic tornado attacking above a glowing city at night, the tornado is made of smoke"
+Current Time: 1765406920.897, Latency: 4.778101
+Prompt: "an epic tornado attacking above a glowing city at night, the tornado is made of smoke aesthetic score: 6.5."
+Current Time: 1765406925.849, Latency: 4.740876

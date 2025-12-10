@@ -324,7 +324,7 @@ def main():
 
                 logger.info(str(save_paths))
                 for idx, batch_prompt in enumerate(batch_prompts):
-                    logger.info("Prompt: %s", batch_prompt, " idx")
+                    logger.info("Prompt: %s", batch_prompt, idx)
                     save_path = save_paths[idx]
                     video = [video_clips[i][idx] for i in range(loop)]
                     for i in range(1, loop):

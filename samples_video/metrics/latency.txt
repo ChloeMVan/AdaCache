@@ -1,0 +1,4 @@
+Prompt: "golden fish swimming in the ocean."
+Current Time: 1765384944.521, Latency: 22.256084
+Prompt: "golden fish swimming in the ocean. aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765384966.220, Latency: 20.547155

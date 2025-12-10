@@ -1,0 +1,4 @@
+Prompt: "A lightning striking atop of eiffel tower, dark clouds in the sky"
+Current Time: 1765392420.748, Latency: 5.343195
+Prompt: "a lightning striking atop of eiffel tower, dark clouds in the sky aesthetic score: 6.5."
+Current Time: 1765392425.774, Latency: 4.823542

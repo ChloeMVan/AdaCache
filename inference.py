@@ -320,7 +320,7 @@ def main():
                 if device == "cuda":
                     torch.cuda.synchronize()
                 dt = time.perf_counter() - t0
-                log_latency(latency_log_path, prompt, dt)
+                log_latency(latency_log_path, batch_prompts[0], dt)
 
                 logger.info(str(save_paths))
                 for idx, batch_prompt in enumerate(batch_prompts):

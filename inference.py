@@ -322,10 +322,10 @@ def main():
                 dt = time.perf_counter() - t0
                 log_latency(latency_log_path, batch_prompts[0], dt)
 
-                logger.info(str(save_paths))
+                # logger.info(str(save_paths))
                 for idx, batch_prompt in enumerate(batch_prompts):
-                    logger.info("Prompt: %s", batch_prompt, idx)
-                    save_path = save_paths[idx]
+                    logger.info("Prompt: %s", batch_prompt, str(save_paths[0]),  idx)
+                    save_path = save_paths[0]
                     video = [video_clips[i][idx] for i in range(loop)]
                     for i in range(1, loop):
                         video[i] = video[i][:, dframe_to_frame(condition_frame_length) :]

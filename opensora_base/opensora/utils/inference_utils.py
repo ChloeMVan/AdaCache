@@ -39,7 +39,7 @@ def get_save_path_name(
     sample_name=None,  # prefix
     sample_idx=None,  # sample index
     prompt=None,  # used prompt
-    prompt_as_path=False,  # use prompt as path
+    prompt_as_path=True,  # use prompt as path
     num_sample=1,  # number of samples to generate for one prompt
     k=None,  # kth sample
 ):

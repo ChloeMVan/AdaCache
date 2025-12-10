@@ -464,6 +464,7 @@ class STDiT3(PreTrainedModel):
 
         # self.metric_log = []
         self.cache_metric_log = []
+        self.current_prompt = None
 
         super().__init__(config)
         self.pred_sigma = config.pred_sigma
@@ -587,20 +588,21 @@ class STDiT3(PreTrainedModel):
         self.num_sampling_steps = config.num_sampling_steps
 
 
-    def dump_cache_metrics(self, filepath, prompt):
-        """Write per-step averaged cache_diff + new_rate to a CSV file."""
+    def dump_cache_metrics(self, filepath):
         header_needed = not os.path.exists(filepath)
         start = None
         with open(filepath, "a", encoding="utf-8") as f:
-            # if header_needed:
             for m in self.cache_metric_log:
-                if start == None or m['step'] == start:
-                    f.write(f"Prompt: {prompt}\n")
-                    f.write("step, cache_diff, mo_reg, mo_grad, new_rate\n")
-                    start = m['step']
-                f.write(f"{m['step']},{m['cache_diff']:.3f},{m['mo_reg']:.3f}, {m['mo_grad']:.3f}, {m['new_rate']}\n")
-            # clear after dumping so we don't duplicate on the next call
-            self.cache_metric_log = []
+                if start is None or m["step"] == start:
+                    f.write(f"Prompt: {m.get('prompt', '')}\n")
+                    f.write("sample_idx,step,cache_diff,mo_reg,mo_grad,new_rate\n")
+                    start = m["step"]
+                f.write(
+                    f"{m.get('sample_idx','')},{m['step']},"
+                    f"{m['cache_diff']:.3f},{m['mo_reg']:.3f},"
+                    f"{m['mo_grad']:.3f},{m['new_rate']}\n"
+                )
+        self.cache_metric_log = []
 
     def initialize_weights(self):
         # Initialize transformer layers:
@@ -737,6 +739,10 @@ class STDiT3(PreTrainedModel):
             x = rearrange(x, "B T S C -> B (T S) C", T=T, S=S)
 
         if "step_metrics" in ada_dict:
+            prompt     = getattr(self, "current_prompt", None)
+            for m in ada_dict["step_metrics"]:
+                m["prompt"] = prompt
+
             self.cache_metric_log.extend(ada_dict["step_metrics"])
             ada_dict["step_metrics"] = []
 

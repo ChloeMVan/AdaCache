@@ -161,7 +161,8 @@ def main():
         # save_dir = f"{save_dir}{timestring}"
     os.makedirs(save_dir, exist_ok=True)
     sample_name = cfg.get("sample_name", None)
-    prompt_as_path = cfg.get("prompt_as_path", False)
+    # prompt_as_path = cfg.get("prompt_as_path", False)
+    prompt_as_path = True
 
     # latency log
         # path for logging end-to-end generation latency (TeaCache-style)
@@ -297,6 +298,7 @@ def main():
                 #torch.manual_seed(1024)
                 z = torch.randn(len(batch_prompts), vae.out_channels, *latent_size, device=device, dtype=dtype)
                 masks = apply_mask_strategy(z, refs, ms, loop_i, align=align)
+                model.current_prompt = batch_prompts_loop[0]
                 samples = scheduler.sample(
                     model,
                     text_encoder,

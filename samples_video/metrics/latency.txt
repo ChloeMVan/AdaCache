@@ -1,6 +1,0 @@
-Prompt: "a train accelerating to gain speed"
-Current Time: 1765379677.222, Latency: 20.825688
-Prompt: "a train accelerating to gain speed"
-Current Time: 1765379784.013, Latency: 20.804262
-Prompt: "a train accelerating to gain speed aesthetic score: 6.5. motion score: 5.0."
-Current Time: 1765379805.776, Latency: 20.519528

@@ -590,10 +590,13 @@ class STDiT3(PreTrainedModel):
     def dump_cache_metrics(self, filepath, prompt):
         """Write per-step averaged cache_diff + new_rate to a CSV file."""
         header_needed = not os.path.exists(filepath)
+        start = None
         with open(filepath, "a", encoding="utf-8") as f:
             if header_needed:
-                f.write(f"Prompt: {prompt}\n")
-                f.write("step, cache_diff, mo_reg, mo_grad, new_rate\n")
+                if start == None or m['step'] == start:
+                    f.write(f"Prompt: {prompt}\n")
+                    f.write("step, cache_diff, mo_reg, mo_grad, new_rate\n")
+                    start = m['step']
             for m in self.cache_metric_log:
                 f.write(f"{m['step']},{m['cache_diff']:.3f},{m['mo_reg']:.3f}, {m['mo_grad']:.3f}, {m['new_rate']}\n")
             # clear after dumping so we don't duplicate on the next call

@@ -163,7 +163,7 @@ def main():
 
     # latency log
         # path for logging end-to-end generation latency (TeaCache-style)
-    latency_log_path = os.path.join(save_dir, "latency.txt")
+    latency_log_path = "./samples_video/metrics/latency.txt"
 
 
     # == Iter over all samples ==

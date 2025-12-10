@@ -39,6 +39,12 @@ def get_time_string() -> str:
     x = datetime.datetime.now()
     return f"{(x.year - 2000):02d}{x.month:02d}{x.day:02d}-{x.hour:02d}{x.minute:02d}{x.second:02d}"
 
+def log_latency(path: str, op_name: str, dt: float) -> None:
+    """Append a TeaCache-style latency record: timestamp,op_name,seconds."""
+    # Only do file I/O on rank 0 to avoid clashes in distributed runs.
+    if (not dist.is_available()) or (not dist.is_initialized()) or dist.get_rank() == 0:
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(f"{time.time():.6f},{op_name},{dt:.6f}\n")
 
 def main():
     torch.set_grad_enabled(False)
@@ -154,6 +160,11 @@ def main():
     sample_name = cfg.get("sample_name", None)
     prompt_as_path = cfg.get("prompt_as_path", False)
 
+    # latency log
+        # path for logging end-to-end generation latency (TeaCache-style)
+    latency_log_path = os.path.join(save_dir, "adacache_latency.csv")
+
+
     # == Iter over all samples ==
     for i in progress_wrap(range(0, len(prompts), batch_size)):
         # == prepare batch prompts ==
@@ -173,8 +184,14 @@ def main():
             multi_resolution, len(batch_prompts), image_size, num_frames, fps, device, dtype
         )
 
+
         # == Iter over number of sampling for one prompt ==
         for k in range(num_sample):
+            # timer start
+            if device == "cuda":
+                torch.cuda.synchronize()
+            t0 = time.perf_counter()
+
             # == prepare save paths ==
             save_paths = [
                 get_save_path_name(
@@ -290,6 +307,13 @@ def main():
 
             # == save samples ==
             if is_main_process():
+
+                # timer end
+                if device == "cuda":
+                    torch.cuda.synchronize()
+                dt = time.perf_counter() - t0
+                log_latency(latency_log_path, "generate_compute", dt)
+
                 for idx, batch_prompt in enumerate(batch_prompts):
                     if verbose >= 2:
                         logger.info("Prompt: %s", batch_prompt)

@@ -177,7 +177,8 @@ def main():
     # latency_log_path = "./samples_video/metrics/latency.txt"
     print("save", str(save_dir))
     #latency_log_path = str(Path(save_dir).parent / "metrics" / "latency.txt")
-    latency_log_path = "metrics/latency.txt"
+    type_dir = "image" if "image" in str(save_dir) else "video"
+    latency_log_path = "metrics/" + type_dir + "/latency.txt"
 
 
 
@@ -351,7 +352,8 @@ def main():
                     # dump metrics
                     # metrics_path = os.path.join(save_dir, "..", "metrics", "adacache_step_metrics.txt")
                     
-                    metrics_path ="metrics/adacache_step_metrics.txt"
+                    type_dir = "image" if "image" in str(save_dir) else "video"
+                    metrics_path ="metrics/"+ type_dir + "/adacache_step_metrics.txt"
                     if hasattr(model, "dump_cache_metrics"):
                         model.dump_cache_metrics(metrics_path)
 

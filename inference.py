@@ -157,7 +157,7 @@ def main():
     multi_resolution = cfg.get("multi_resolution", None)
     batch_size = 1
     #num_sample = cfg.get("num_sample", 2)
-    num_sample = 2
+    num_sample = 1
     loop = cfg.get("loop", 1)
     condition_frame_length = cfg.get("condition_frame_length", 5)
     condition_frame_edit = cfg.get("condition_frame_edit", 0.0)

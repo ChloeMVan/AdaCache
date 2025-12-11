@@ -1,7 +1,7 @@
 config=$1
 
 prompt_path='./prompts/gallery.txt'
-reference_path='./samples_image/gallery*'
+reference_path='./samples_image/gallery'
 save_dir='./samples_video/gallery/'
 
 #prompt_path='./prompts/sora.txt'

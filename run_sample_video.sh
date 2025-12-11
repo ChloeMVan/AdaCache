@@ -10,7 +10,7 @@ save_dir='./samples_video/gallery/'
 
 python inference.py ${config} \
   --flash-attn True \
-  --layernorm-kernel True \
+  --layernorm-kernel False \
   --num-frames '2s' \
   --resolution '480p' \
   --aspect-ratio '9:16' \

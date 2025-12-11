@@ -44,6 +44,13 @@ def log_latency(path: str, prompt, dt: float) -> None:
     """Append a TeaCache-style latency record: timestamp,op_name,seconds."""
     # Only do file I/O on rank 0 to avoid clashes in distributed runs.
     if (not dist.is_available()) or (not dist.is_initialized()) or dist.get_rank() == 0:
+        
+        # Ensure directory exists
+        dirpath = os.path.dirname(path)
+        if dirpath != "":
+            os.makedirs(dirpath, exist_ok=True)
+
+        # Append log entry
         with open(path, "a", encoding="utf-8") as f:
             f.write(f"Prompt: \"{prompt}\"\n")
             f.write(f"Current Time: {time.time():.3f}, Latency: {dt:.6f}\n")
@@ -169,7 +176,7 @@ def main():
         # path for logging end-to-end generation latency (TeaCache-style)
     # latency_log_path = "./samples_video/metrics/latency.txt"
     print("save", str(save_dir))
-    latency_log_path = str(Path(save_dir).parent / "metrics" / "latency.txt")
+    latency_log_path = str(Path(save_dir) / "metrics" / "latency.txt")
 
 
 

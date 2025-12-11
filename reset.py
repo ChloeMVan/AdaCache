@@ -30,16 +30,16 @@ def add(path):
 empty_directory("samples_video/gallery")
 empty_directory("samples_video/metrics")
 
-# empty_directory("samples_image/gallery")
-# empty_directory("samples_image/gallery_backup")
-# empty_directory("samples_image/metrics")
+empty_directory("samples_image/gallery")
+empty_directory("samples_image/gallery_backup")
+empty_directory("samples_image/metrics")
 # add("samples_image/metrics/latency.txt")
 # add("samples_image/metrics/adacache_metrics.csv")
 
 empty_directory("samples_video/gallery")
 empty_directory("samples_video/metrics")
-add("samples_video/gallery/metrics/latency.txt")
-add("samples_video/metrics/adacache_metrics.csv")
+# add("samples_video/gallery/metrics/latency.txt")
+# add("samples_video/metrics/adacache_metrics.csv")
 
 d = "_d"
 remove("samples_image/gallery" + d)

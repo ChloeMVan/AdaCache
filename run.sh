@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python reset.py
+# python reset.py
 bash run_sample_image.sh configs/sample.py
 sleep 5s
 python clean.py

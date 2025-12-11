@@ -163,6 +163,9 @@ def main():
         ms = mask_strategy[i : i + batch_size]
         refs = reference_path[i : i + batch_size]
 
+        print("PROMPT LISTS: ", prompts)
+        print("REFERENCE LISTS: ", reference_path)
+
         # == get json from prompts ==
         batch_prompts, refs, ms = extract_json_from_prompts(batch_prompts, refs, ms)
         original_batch_prompts = batch_prompts
@@ -171,6 +174,8 @@ def main():
 
         # == get reference for condition ==
         refs = collect_references_batch(refs, vae, image_size)
+
+        print("REFS: ", repr(refs))
 
         # == multi-resolution info ==
         model_args = prepare_multi_resolution_info(

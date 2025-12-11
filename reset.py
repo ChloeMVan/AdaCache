@@ -60,9 +60,22 @@ def empty_directories_and_files(root_path: str) -> None:
                 except Exception as e:
                     print(f"Error deleting {file_path}: {e}")
 
+def remove_backup():
+    ROOT_DIR = "samples_image"   # change this to the top-level folder you want to clean
+
+    for dirpath, dirnames, filenames in os.walk(ROOT_DIR, topdown=False):
+        for dirname in dirnames:
+            if "backup" in dirname.lower():   # case-insensitive match
+                full_path = os.path.join(dirpath, dirname)
+                print(f"Deleting directory: {full_path}")
+                shutil.rmtree(full_path)
+
+    print("Done!")
+
 empty_directories_and_files("samples_video")
 empty_directories_and_files("samples_image")
 empty_directories_and_files("metrics")
+remove_backup()
 
 # empty_directory("samples_video/gallery")
 # empty_directory("samples_video/metrics")

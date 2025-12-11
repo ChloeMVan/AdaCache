@@ -27,21 +27,57 @@ def add(path):
     except FileExistsError:
         print("Error: File 'new_exclusive_file.txt' already exists.")
 
-empty_directory("samples_video/gallery")
-empty_directory("samples_video/metrics")
+def empty_directories_and_files(root_path: str) -> None:
+    """
+    Recursively empties all directories under `root_path`.
+    - Deletes all non-txt/csv files.
+    - Empties the contents of any .txt or .csv files.
+    - Keeps directory structure intact.
+    """
 
-empty_directory("samples_image/gallery")
-empty_directory("samples_image/gallery_backup")
-empty_directory("samples_image/metrics")
+    if not os.path.isdir(root_path):
+        raise ValueError(f"Path does not exist or is not a directory: {root_path}")
+
+    # Walk the tree
+    for dirpath, dirnames, filenames in os.walk(root_path):
+        for filename in filenames:
+            file_path = os.path.join(dirpath, filename)
+
+            # For .txt or .csv: empty them
+            if filename.lower().endswith(".txt") or filename.lower().endswith(".csv"):
+                try:
+                    with open(file_path, "w", encoding="utf-8") as f:
+                        pass  # writing nothing truncates the file
+                    print(f"Emptied: {file_path}")
+                except Exception as e:
+                    print(f"Error emptying {file_path}: {e}")
+
+            # For all other files: delete them
+            else:
+                try:
+                    os.remove(file_path)
+                    print(f"Deleted: {file_path}")
+                except Exception as e:
+                    print(f"Error deleting {file_path}: {e}")
+
+empty_directories_and_files("samples_video")
+empty_directories_and_files("samples_image")
+
+# empty_directory("samples_video/gallery")
+# empty_directory("samples_video/metrics")
+
+# empty_directory("samples_image/gallery")
+# empty_directory("samples_image/gallery_backup")
+# empty_directory("samples_image/metrics")
 # add("samples_image/metrics/latency.txt")
 # add("samples_image/metrics/adacache_metrics.csv")
 
-empty_directory("samples_video/gallery")
-empty_directory("samples_video/metrics")
+# empty_directory("samples_video/gallery")
+# empty_directory("samples_video/metrics")
 # add("samples_video/gallery/metrics/latency.txt")
 # add("samples_video/metrics/adacache_metrics.csv")
 
-d = "_d"
-remove("samples_image/gallery" + d)
-remove("samples_image/gallery_backup"  + d)
-remove("samples_image/metrics" + d)
+# d = "_d"
+# remove("samples_image/gallery" + d)
+# remove("samples_image/gallery_backup"  + d)
+# remove("samples_image/metrics" + d)

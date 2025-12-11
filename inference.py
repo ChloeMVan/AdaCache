@@ -169,8 +169,8 @@ def main():
         save_dir = f"{save_dir}{timestring}"
     os.makedirs(save_dir, exist_ok=True)
     sample_name = cfg.get("sample_name", None)
-    # prompt_as_path = cfg.get("prompt_as_path", True)
-    prompt_as_path = True
+    prompt_as_path = cfg.get("prompt_as_path", False)
+    #prompt_as_path = True
 
     # latency log
         # path for logging end-to-end generation latency (TeaCache-style)

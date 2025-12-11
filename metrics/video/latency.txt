@@ -1,0 +1,40 @@
+Prompt: "a lightning striking atop of eiffel tower, dark clouds in the sky aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421259.061, Latency: 23.715635
+Prompt: "a lightning striking atop of eiffel tower, dark clouds in the sky aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421279.223, Latency: 19.083203
+Prompt: "an epic tornado attacking above a glowing city at night, the tornado is made of smoke aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421299.553, Latency: 19.080632
+Prompt: "an epic tornado attacking above a glowing city at night, the tornado is made of smoke aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421319.616, Latency: 19.086204
+Prompt: "a horse galloping across an open field aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421339.811, Latency: 19.120791
+Prompt: "a horse galloping across an open field aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421364.333, Latency: 23.441317
+Prompt: "a person is bungee jumping aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421388.928, Latency: 23.450468
+Prompt: "a person is bungee jumping aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421413.503, Latency: 23.458270
+Prompt: "a giraffe running to join a herd of its kind aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421438.140, Latency: 23.456235
+Prompt: "a giraffe running to join a herd of its kind aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421462.787, Latency: 23.498113
+Prompt: "gwen stacy reading a book, in super slow motion aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421486.017, Latency: 22.044879
+Prompt: "gwen stacy reading a book, in super slow motion aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421510.592, Latency: 23.502501
+Prompt: "a boat sailing leisurely along the seine river with the eiffel tower in background, watercolor painting aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421532.330, Latency: 20.544362
+Prompt: "a boat sailing leisurely along the seine river with the eiffel tower in background, watercolor painting aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421553.972, Latency: 20.585916
+Prompt: "an astronaut flying in space, pan left aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421578.603, Latency: 23.494059
+Prompt: "an astronaut flying in space, pan left aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421603.351, Latency: 23.484235
+Prompt: "vincent van gogh is painting in the room aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421628.042, Latency: 23.487512
+Prompt: "vincent van gogh is painting in the room aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421649.724, Latency: 20.549104
+Prompt: "a dog enjoying a peaceful walk aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421671.330, Latency: 20.547538
+Prompt: "a dog enjoying a peaceful walk aesthetic score: 6.5. motion score: 5.0."
+Current Time: 1765421695.916, Latency: 23.444253

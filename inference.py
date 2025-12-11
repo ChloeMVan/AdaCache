@@ -156,6 +156,9 @@ def main():
     # prompt_as_path = cfg.get("prompt_as_path", False)
     prompt_as_path = True
 
+    prompts.sort()
+    reference_path.sort()
+
     # == Iter over all samples ==
     for i in progress_wrap(range(0, len(prompts), batch_size)):
         # == prepare batch prompts ==

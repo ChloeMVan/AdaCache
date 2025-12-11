@@ -598,7 +598,7 @@ class STDiT3(PreTrainedModel):
                     f.write("sample_idx,step,cache_diff,mo_reg,mo_grad,new_rate\n")
                     start = m["step"]
                 f.write(
-                    f"{m.get('sample_idx','')},{m['step']},"
+                    f"{m['step']},"
                     f"{m['cache_diff']:.3f},{m['mo_reg']:.3f},"
                     f"{m['mo_grad']:.3f},{m['new_rate']}\n"
                 )

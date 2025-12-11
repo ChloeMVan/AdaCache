@@ -72,11 +72,11 @@ def remove_backup(root, word):
 
     print("Done!")
 
-# empty_directories_and_files("samples_video")
-# empty_directories_and_files("samples_image")
-# empty_directories_and_files("metrics")
-# remove_backup("samples_image","backup")
-# remove_backup("samples_image","gallery")
+empty_directories_and_files("samples_video")
+empty_directories_and_files("samples_image")
+empty_directories_and_files("metrics")
+remove_backup("samples_image","backup")
+remove_backup("samples_image","gallery")
 
 
 # empty_directory("samples_video/gallery")

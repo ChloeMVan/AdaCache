@@ -180,7 +180,8 @@ def main():
     type_dir = "image" if "image" in str(save_dir) else "video"
     latency_log_path = "metrics/" + type_dir + "/latency.txt"
 
-
+    prompts.sort()
+    reference_path.sort()
 
     # == Iter over all samples ==
     for i in progress_wrap(range(0, len(prompts), batch_size)):

@@ -14,7 +14,7 @@ python inference.py ${config} \
   --num-frames '2s' \
   --resolution '480p' \
   --aspect-ratio '9:16' \
-  --num-sampling-steps 30 \
+  --num-sampling-steps 100 \
   --prompt-path ${prompt_path} \
   --reference-path ${reference_path} \
   --save-dir ${save_dir} \

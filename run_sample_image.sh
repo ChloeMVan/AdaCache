@@ -12,7 +12,7 @@ python inference.py ${config} \
   --num-frames 1 \
   --resolution '480p' \
   --aspect-ratio '9:16' \
-  --num-sampling-steps 30 \
+  --num-sampling-steps 100 \
   --prompt-path ${prompt_path} \
   --save-dir ${save_dir} \
   --logdate-dir True \

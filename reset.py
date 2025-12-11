@@ -38,7 +38,7 @@ empty_directory("samples_video/metrics")
 
 empty_directory("samples_video/gallery")
 empty_directory("samples_video/metrics")
-add("samples_video/metrics/latency.txt")
+add("samples_video/gallery/metrics/latency.txt")
 add("samples_video/metrics/adacache_metrics.csv")
 
 d = "_d"

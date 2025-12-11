@@ -168,6 +168,7 @@ def main():
     # latency log
         # path for logging end-to-end generation latency (TeaCache-style)
     # latency_log_path = "./samples_video/metrics/latency.txt"
+    print("save", str(save_dir))
     latency_log_path = str(Path(save_dir).parent / "metrics" / "latency.txt")
 
 

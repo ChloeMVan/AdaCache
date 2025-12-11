@@ -378,7 +378,7 @@ class STDiT3Block(nn.Module):
 
             self.prev_compute_step = 0
 
-            # self.metric_log = []
+            self.metric_log = []
 
         return x, ada_dict
 

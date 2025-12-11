@@ -155,9 +155,8 @@ def main():
     fps = cfg.fps
     save_fps = cfg.get("save_fps", fps // cfg.get("frame_interval", 1))
     multi_resolution = cfg.get("multi_resolution", None)
-    batch_size = 1
-    #num_sample = cfg.get("num_sample", 2)
-    num_sample = 1
+    batch_size = cfg.get("batch_size", 1)
+    num_sample = cfg.get("num_sample", 1)
     loop = cfg.get("loop", 1)
     condition_frame_length = cfg.get("condition_frame_length", 5)
     condition_frame_edit = cfg.get("condition_frame_edit", 0.0)
@@ -204,10 +203,7 @@ def main():
 
         # == Iter over number of sampling for one prompt ==
         for k in range(num_sample):
-            # timer start
-            if device == "cuda":
-                torch.cuda.synchronize()
-            t0 = time.perf_counter()
+            
 
             # == prepare save paths ==
             save_paths = [
@@ -224,10 +220,16 @@ def main():
 
             ]
 
+
             # NOTE: Skip if the sample already exists
             # This is useful for resuming sampling VBench
             if prompt_as_path and all_exists(save_paths):
                 continue
+
+            # timer start
+            if device == "cuda":
+                torch.cuda.synchronize()
+            t0 = time.perf_counter()
 
             # == process prompts step by step ==
             # 0. split prompt
@@ -345,7 +347,7 @@ def main():
                         video,
                         fps=save_fps,
                         save_path=save_path,
-                        # verbose=verbose >= 2,
+                        verbose=verbose >= 2,
                     )
                     print("DEBUG-SAVE:", repr(batch_prompt), "->", save_path)
 

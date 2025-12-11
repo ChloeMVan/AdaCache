@@ -1,22 +1,43 @@
 import os
+import glob
 import shutil
 
-# Root folder containing "gallery"
-root = "samples_image"
+# ------------------------------------------------------------
+# Configuration
+# ------------------------------------------------------------
+ROOT_DIR = "samples_image"
+GALLERY_PATTERN = os.path.join(ROOT_DIR, "gallery*")  # find gallery, gallery123, galleryXYZ, etc.
 
-gallery_dir = os.path.join(root, "gallery")
-backup_dir = os.path.join(root, "gallery_backup")
+# ------------------------------------------------------------
+# Find matching gallery directories
+# ------------------------------------------------------------
+gallery_dirs = [d for d in glob.glob(GALLERY_PATTERN) if os.path.isdir(d)]
 
-# Create backup dir if missing
-os.makedirs(backup_dir, exist_ok=True)
+if not gallery_dirs:
+    raise FileNotFoundError(f"No gallery directories match pattern: {GALLERY_PATTERN}")
 
-# Iterate through files in gallery
-for fname in os.listdir(gallery_dir):
-    # Match files like "sample_xxxx-1.png"
-    if fname.endswith("-1.png"):
-        src = os.path.join(gallery_dir, fname)
-        dst = os.path.join(backup_dir, fname)
-        print(f"Moving: {src} -> {dst}")
-        shutil.move(src, dst)
+print("Found gallery directories:")
+for d in gallery_dirs:
+    print(f"  - {d}")
 
-print("Done!")
+# ------------------------------------------------------------
+# Process each gallery directory
+# ------------------------------------------------------------
+for gallery_dir in gallery_dirs:
+    # Create a backup directory specifically for THIS gallery
+    backup_dir = gallery_dir + "_backup"
+    os.makedirs(backup_dir, exist_ok=True)
+
+    print(f"\nProcessing: {gallery_dir}")
+    print(f"Backup dir: {backup_dir}")
+
+    # Move matching files
+    for fname in os.listdir(gallery_dir):
+        if fname.endswith("-1.png"):   # match whatever pattern you want
+            src = os.path.join(gallery_dir, fname)
+            dst = os.path.join(backup_dir, fname)
+
+            print(f"  Moving: {src} -> {dst}")
+            shutil.move(src, dst)
+
+print("\nDone!")

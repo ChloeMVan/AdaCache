@@ -34,21 +34,58 @@ def load_prompts(prompt_path, start_idx=None, end_idx=None):
     return prompts
 
 
+import os
+import re
+import hashlib
+
+def _sanitize_for_filename(text: str, max_len: int = 80) -> str:
+    """
+    Turn arbitrary prompt text into a safe, reasonably short filename component.
+    """
+    if text is None:
+        return "none"
+
+    # Replace whitespace with underscores
+    text = re.sub(r"\s+", "_", text.strip())
+
+    # Keep only a safe subset: letters, digits, dash, underscore, dot
+    text = re.sub(r"[^A-Za-z0-9._-]", "_", text)
+
+    # Truncate, but add a short hash to keep uniqueness for long prompts
+    if len(text) > max_len:
+        h = hashlib.sha1(text.encode("utf-8")).hexdigest()[:8]
+        text = text[: max_len - 9] + "_" + h
+
+    return text
+
+
 def get_save_path_name(
     save_dir,
-    sample_name=None,  # prefix
-    sample_idx=None,  # sample index
-    prompt=None,  # used prompt
-    prompt_as_path=True,  # use prompt as path
-    num_sample=1,  # number of samples to generate for one prompt
-    k=None,  # kth sample
+    sample_name=None,      # prefix
+    sample_idx=None,       # sample index
+    prompt=None,           # used prompt
+    prompt_as_path=True,   # use prompt as path
+    num_sample=1,          # number of samples to generate for one prompt
+    k=None,                # kth sample
 ):
     if sample_name is None:
         sample_name = "" if prompt_as_path else "sample"
-    sample_name_suffix = prompt if prompt_as_path else f"_{sample_idx:04d}"
-    save_path = os.path.join(save_dir, f"{sample_name}{sample_name_suffix}")
+
+    if prompt_as_path:
+        safe_prompt = _sanitize_for_filename(prompt)
+        sample_name_suffix = safe_prompt
+    else:
+        if sample_idx is None:
+            raise ValueError("sample_idx must be provided when prompt_as_path=False")
+        sample_name_suffix = f"_{sample_idx:04d}"
+
+    base = f"{sample_name}{sample_name_suffix}"
     if num_sample != 1:
-        save_path = f"{save_path}-{k}"
+        if k is None:
+            raise ValueError("k must be provided when num_sample != 1")
+        base = f"{base}-{k}"
+
+    save_path = os.path.join(save_dir, base)
     return save_path
 
 

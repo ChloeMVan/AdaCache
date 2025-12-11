@@ -148,7 +148,7 @@ def main():
     fps = cfg.fps
     save_fps = cfg.get("save_fps", fps // cfg.get("frame_interval", 1))
     multi_resolution = cfg.get("multi_resolution", None)
-    batch_size = cfg.get("batch_size", 1)
+    batch_size = 1
     #num_sample = cfg.get("num_sample", 2)
     num_sample = 2
     loop = cfg.get("loop", 1)
@@ -159,7 +159,7 @@ def main():
     save_dir = cfg.save_dir
     if cfg.get("logdate_dir", False):
         timestring = get_time_string()
-        # save_dir = f"{save_dir}{timestring}"
+        save_dir = f"{save_dir}{timestring}"
     os.makedirs(save_dir, exist_ok=True)
     sample_name = cfg.get("sample_name", None)
     # prompt_as_path = cfg.get("prompt_as_path", True)
@@ -324,7 +324,7 @@ def main():
 
                 # logger.info(str(save_paths))
                 for idx, batch_prompt in enumerate(batch_prompts):
-                    logger.info("Prompt: %s", batch_prompt, str(save_paths[0]),  idx)
+                    logger.info("Prompt: %s", batch_prompt, str(save_paths[0]))
                     save_path = save_paths[0]
                     video = [video_clips[i][idx] for i in range(loop)]
                     for i in range(1, loop):
@@ -334,7 +334,7 @@ def main():
                         video,
                         fps=save_fps,
                         save_path=save_path,
-                        verbose=verbose >= 2,
+                        # verbose=verbose >= 2,
                     )
 
                     # dump metrics

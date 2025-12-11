@@ -211,6 +211,7 @@ def main():
                     k=k,
                 )
                 for idx in range(len(batch_prompts))
+
             ]
 
             # NOTE: Skip if the sample already exists
@@ -324,8 +325,8 @@ def main():
 
                 # logger.info(str(save_paths))
                 for idx, batch_prompt in enumerate(batch_prompts):
-                    logger.info("Prompt: %s", batch_prompt, str(save_paths[0]))
-                    save_path = save_paths[0]
+                    logger.info("Prompt: %s", batch_prompt, str(save_paths[idx]))
+                    save_path = save_paths[idx]
                     video = [video_clips[i][idx] for i in range(loop)]
                     for i in range(1, loop):
                         video[i] = video[i][:, dframe_to_frame(condition_frame_length) :]
@@ -336,6 +337,7 @@ def main():
                         save_path=save_path,
                         # verbose=verbose >= 2,
                     )
+                    print("DEBUG-SAVE:", repr(batch_prompt), "->", save_path)
 
                     # dump metrics
                     # metrics_path = os.path.join(save_dir, "..", "metrics", "adacache_step_metrics.txt")

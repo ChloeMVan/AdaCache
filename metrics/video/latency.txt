@@ -1,60 +1,60 @@
 Prompt: "a boat sailing leisurely along the seine river with the eiffel tower in background, watercolor painting aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438078.592, Latency: 19.386144
+Current Time: 1765439778.400, Latency: 19.368753
 Prompt: "a boat sailing leisurely along the seine river with the eiffel tower in background, watercolor painting aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438098.657, Latency: 19.074584
+Current Time: 1765439799.945, Latency: 20.531418
 Prompt: "a person is bungee jumping aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438121.740, Latency: 22.001288
+Current Time: 1765439821.577, Latency: 20.531773
 Prompt: "a person is bungee jumping aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438144.758, Latency: 21.990107
+Current Time: 1765439843.136, Latency: 20.538544
 Prompt: "a tranquil tableau of the stonehenge presented itself as an enigmatic puzzle, each colossal stone meticulously placed against the backdrop of tranquility aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438165.004, Latency: 19.120504
+Current Time: 1765439864.858, Latency: 20.570110
 Prompt: "a tranquil tableau of the stonehenge presented itself as an enigmatic puzzle, each colossal stone meticulously placed against the backdrop of tranquility aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438185.183, Latency: 19.095358
+Current Time: 1765439883.621, Latency: 17.668698
 Prompt: "an astronaut flying in space, pan left aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438209.668, Latency: 23.442452
+Current Time: 1765439905.222, Latency: 20.546407
 Prompt: "an astronaut flying in space, pan left aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438231.339, Latency: 20.548743
+Current Time: 1765439926.879, Latency: 20.567212
 Prompt: "an epic tornado attacking above a glowing city at night, the tornado is made of smoke aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438255.917, Latency: 23.450706
+Current Time: 1765439950.064, Latency: 22.023723
 Prompt: "an epic tornado attacking above a glowing city at night, the tornado is made of smoke aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438276.206, Latency: 19.122364
+Current Time: 1765439971.761, Latency: 20.571833
 Prompt: "gwen stacy reading a book, in super slow motion aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438298.010, Latency: 20.576426
+Current Time: 1765439993.532, Latency: 20.574364
 Prompt: "gwen stacy reading a book, in super slow motion aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438319.578, Latency: 20.549248
+Current Time: 1765440015.124, Latency: 20.584406
 Prompt: "in a still frame, a tranquil japanese tea ceremony room, with tatami mats, a delicate tea set, and a bonsai tree in the corner aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438344.178, Latency: 23.492438
+Current Time: 1765440035.369, Latency: 19.119199
 Prompt: "in a still frame, a tranquil japanese tea ceremony room, with tatami mats, a delicate tea set, and a bonsai tree in the corner aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438364.326, Latency: 19.107783
+Current Time: 1765440055.532, Latency: 19.121292
 Prompt: "vincent van gogh is painting in the room aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438384.348, Latency: 19.117932
+Current Time: 1765440075.545, Latency: 19.093668
 Prompt: "vincent van gogh is painting in the room aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438409.034, Latency: 23.494386
+Current Time: 1765440097.290, Latency: 20.574140
 Prompt: "a dog enjoying a peaceful walk aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438432.416, Latency: 22.035959
+Current Time: 1765440117.641, Latency: 19.089352
 Prompt: "a dog enjoying a peaceful walk aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438455.637, Latency: 22.034354
+Current Time: 1765440137.935, Latency: 19.122049
 Prompt: "a giraffe running to join a herd of its kind aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438478.923, Latency: 22.023985
+Current Time: 1765440161.173, Latency: 21.994758
 Prompt: "a giraffe running to join a herd of its kind aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438502.187, Latency: 22.044415
+Current Time: 1765440184.441, Latency: 22.028955
 Prompt: "a horse galloping across an open field aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438522.605, Latency: 19.123671
+Current Time: 1765440203.358, Latency: 17.647906
 Prompt: "a horse galloping across an open field aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438542.766, Latency: 19.122252
+Current Time: 1765440223.478, Latency: 19.087611
 Prompt: "a hot dog on the top of a pizza, front view aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438564.379, Latency: 20.581834
+Current Time: 1765440245.110, Latency: 20.575687
 Prompt: "a hot dog on the top of a pizza, front view aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438586.110, Latency: 20.580538
+Current Time: 1765440265.358, Latency: 19.123218
 Prompt: "a toilet, frozen in time aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438606.429, Latency: 19.126463
+Current Time: 1765440287.129, Latency: 20.574518
 Prompt: "a toilet, frozen in time aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438626.573, Latency: 19.101221
+Current Time: 1765440307.316, Latency: 19.120428
 Prompt: "forest road aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438646.880, Latency: 19.117348
+Current Time: 1765440327.607, Latency: 19.119111
 Prompt: "forest road aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438667.029, Latency: 19.118686
+Current Time: 1765440347.742, Latency: 19.123944
 Prompt: "lightning striking atop of eiffel tower, dark clouds in the sky aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438688.671, Latency: 20.544367
+Current Time: 1765440367.945, Latency: 19.125658
 Prompt: "lightning striking atop of eiffel tower, dark clouds in the sky aesthetic score: 7.0. motion score: 5.0."
-Current Time: 1765438713.154, Latency: 23.467041
+Current Time: 1765440390.965, Latency: 21.991227

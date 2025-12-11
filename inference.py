@@ -132,6 +132,7 @@ def main():
       reference_path = [os.path.join(reference_path[0], pi) for pi in os.listdir(reference_path[0])]
     mask_strategy = cfg.get("mask_strategy", [""])
     mask_strategy = mask_strategy * len(prompts)
+    print("CHECK: ",len(reference_path), len(prompts))
     assert len(reference_path) == len(prompts), "Length of reference must be the same as prompts"
     assert len(mask_strategy) == len(prompts), "Length of mask_strategy must be the same as prompts"
 

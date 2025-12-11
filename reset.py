@@ -62,6 +62,7 @@ def empty_directories_and_files(root_path: str) -> None:
 
 empty_directories_and_files("samples_video")
 empty_directories_and_files("samples_image")
+empty_directories_and_files("metrics")
 
 # empty_directory("samples_video/gallery")
 # empty_directory("samples_video/metrics")

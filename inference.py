@@ -167,6 +167,8 @@ def main():
         batch_prompts, refs, ms = extract_json_from_prompts(batch_prompts, refs, ms)
         original_batch_prompts = batch_prompts
 
+        print("For prompt: ", str(batch_prompts), refs)
+
         # == get reference for condition ==
         refs = collect_references_batch(refs, vae, image_size)
 

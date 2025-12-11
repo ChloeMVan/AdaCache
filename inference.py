@@ -152,7 +152,8 @@ def main():
         save_dir = f"{save_dir}{timestring}"
     os.makedirs(save_dir, exist_ok=True)
     sample_name = cfg.get("sample_name", None)
-    prompt_as_path = cfg.get("prompt_as_path", False)
+    # prompt_as_path = cfg.get("prompt_as_path", False)
+    prompt_as_path = True
 
     # == Iter over all samples ==
     for i in progress_wrap(range(0, len(prompts), batch_size)):

@@ -1,0 +1,20 @@
+Prompt: "golden fish swimming in the ocean. aesthetic score: 6.5."
+Current Time: 1765425989.592, Latency: 5.187503
+Prompt: "golden fish swimming in the ocean. aesthetic score: 6.5."
+Current Time: 1765425994.481, Latency: 4.756095
+Prompt: "the bund shanghai, oil painting aesthetic score: 6.5."
+Current Time: 1765425999.348, Latency: 4.764960
+Prompt: "the bund shanghai, oil painting aesthetic score: 6.5."
+Current Time: 1765426004.255, Latency: 4.702639
+Prompt: "an iron man is playing the electronic guitar, high electronic guitar. aesthetic score: 6.5."
+Current Time: 1765426009.204, Latency: 4.739955
+Prompt: "an iron man is playing the electronic guitar, high electronic guitar. aesthetic score: 6.5."
+Current Time: 1765426014.033, Latency: 4.689465
+Prompt: "a cute fluffy panda eating chinese food in a restaurant aesthetic score: 6.5."
+Current Time: 1765426018.925, Latency: 4.739918
+Prompt: "a cute fluffy panda eating chinese food in a restaurant aesthetic score: 6.5."
+Current Time: 1765426023.793, Latency: 4.737398
+Prompt: "a squirrel eating a burger. aesthetic score: 6.5."
+Current Time: 1765426028.672, Latency: 4.734709
+Prompt: "a squirrel eating a burger. aesthetic score: 6.5."
+Current Time: 1765426033.629, Latency: 4.763972

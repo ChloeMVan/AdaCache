@@ -74,7 +74,7 @@ def remove_backup(root, word):
 
 empty_directories_and_files("samples_video")
 empty_directories_and_files("samples_image")
-empty_directories_and_files("metrics")
+# empty_directories_and_files("metrics")
 remove_backup("samples_image","backup")
 remove_backup("samples_image","gallery")
 

@@ -20,7 +20,7 @@ python inference.py ${config} \
   --save-dir ${save_dir} \
   --logdate-dir True \
   --mask-strategy "0" \
-  --aes 6.5 \
+  --aes 7 \
   --flow 5 \
   --fps 24 \
   --save-fps 24 \
